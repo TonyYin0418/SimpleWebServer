@@ -8,19 +8,19 @@ project(webServer CXX)
 # set(CMAKE_BUILD_TYPE "DEBUG")
 # set(CMAKE_CXX_FLAGS_DEBUG "-g3")
 
-# 设置 C++ 标准为 C++11
-set(CMAKE_CXX_STANDARD 11)
+# 设置 C++ 标准为 C++11  改成了23
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(PROJECT_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}")  # TIP 借助 CMake 来获取文件根目录。
 message("🐱 Project root path: ${PROJECT_ROOT_PATH}")
 
-# 检查编译器是否支持 C++11
+# 检查编译器是否支持 C++11 
 include(CheckCXXCompilerFlag)
-check_cxx_compiler_flag("-std=c++11" COMPILER_SUPPORTS_CXX11)
+check_cxx_compiler_flag("-std=c++23" COMPILER_SUPPORTS_CXX11)
 if(NOT COMPILER_SUPPORTS_CXX11)
-    message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} does not support C++11.")
+    message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} does not support C++23.")
 endif()
 
 # 设置编译选项

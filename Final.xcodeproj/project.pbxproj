@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3830FFE02CFFDB570019E065 /* MyRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3830FFCB2CFFDA610019E065 /* MyRouter.cpp */; };
+		38C421BC2D00663B00ED0E34 /* http_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38C421BB2D00663B00ED0E34 /* http_server.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +26,9 @@
 /* Begin PBXFileReference section */
 		3830FFCB2CFFDA610019E065 /* MyRouter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyRouter.cpp; sourceTree = "<group>"; };
 		3830FFCC2CFFDA960019E065 /* MyRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRouter.h; sourceTree = "<group>"; };
-		3830FFE42CFFDBF80019E065 /* main */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = main; path = "/Users/tonyyin/Library/Mobile Documents/com~apple~CloudDocs/4_DEV/sample-programs/Project/Final/build/Debug/main"; sourceTree = "<absolute>"; };
+		38C421A32D00637700ED0E34 /* main */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = main; sourceTree = BUILT_PRODUCTS_DIR; };
+		38C421BA2D00663B00ED0E34 /* http_server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http_server.h; sourceTree = "<group>"; };
+		38C421BB2D00663B00ED0E34 /* http_server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = http_server.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -49,18 +52,6 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		3830FFEE2D0042B00019E065 /* Exceptions for "Controller" folder in "Compile Sources" phase from "main" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 3889BC092CF5A6B500732A46 /* Sources */;
-			membershipExceptions = (
-				CoursesController.h,
-				MainPageController.h,
-				ScoresController.h,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3830FFC52CFFD91B0019E065 /* framework */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -74,9 +65,13 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				3830FFD42CFFDADA0019E065 /* Exceptions for "Controller" folder in "main" target */,
-				3830FFEE2D0042B00019E065 /* Exceptions for "Controller" folder in "Compile Sources" phase from "main" target */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		38C421C52D0069AB00ED0E34 /* test */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -95,10 +90,14 @@
 		3889BBBA2CF59CB700732A46 = {
 			isa = PBXGroup;
 			children = (
+				38C421BA2D00663B00ED0E34 /* http_server.h */,
+				38C421BB2D00663B00ED0E34 /* http_server.cpp */,
 				3830FFCC2CFFDA960019E065 /* MyRouter.h */,
 				3830FFCB2CFFDA610019E065 /* MyRouter.cpp */,
 				3830FFC52CFFD91B0019E065 /* framework */,
 				3830FFD02CFFDAAD0019E065 /* Controller */,
+				38C421A32D00637700ED0E34 /* main */,
+				38C421C52D0069AB00ED0E34 /* test */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,7 +120,7 @@
 			packageProductDependencies = (
 			);
 			productName = main;
-			productReference = 3830FFE42CFFDBF80019E065 /* main */;
+			productReference = 38C421A32D00637700ED0E34 /* main */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -163,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3830FFE02CFFDB570019E065 /* MyRouter.cpp in Sources */,
+				38C421BC2D00663B00ED0E34 /* http_server.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +287,7 @@
 		3889BC122CF5A6B500732A46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +297,7 @@
 		3889BC132CF5A6B500732A46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";

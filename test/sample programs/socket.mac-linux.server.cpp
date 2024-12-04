@@ -5,6 +5,8 @@
 #include <iostream>
 #include <cstring> // For memset
 
+using namespace std;
+
 int main()
 {
     // 0. Initialize network environment
@@ -23,9 +25,9 @@ int main()
     // 2. Bind port number and IP address
     sockaddr_in addr = {};
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(9870); // Port number  host to net short
-    addr.sin_addr.s_addr = inet_addr("127.0.0.1");   // Localhost address
-    if (bind(sockServer, (sockaddr*)&addr, sizeof(sockaddr_in)) == -1)
+    addr.sin_port = htons(9870);                   // Port number  host to net short
+    addr.sin_addr.s_addr = inet_addr("127.0.0.1"); // Localhost address
+    if (bind(sockServer, (sockaddr *)&addr, sizeof(sockaddr_in)) == -1)
     {
         cerr << "Failed to bind port number" << endl;
         close(sockServer);
@@ -48,7 +50,7 @@ int main()
         cout << "4. Preparing to wait for client" << endl;
         sockaddr_in clientAddr = {};
         socklen_t nAddrLen = sizeof(sockaddr_in);
-        int sockClient = accept(sockServer, (sockaddr*)&clientAddr, &nAddrLen);
+        int sockClient = accept(sockServer, (sockaddr *)&clientAddr, &nAddrLen);
 
         if (sockClient == -1)
         {
