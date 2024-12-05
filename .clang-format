@@ -2,9 +2,10 @@ BasedOnStyle: Google
 IndentWidth: 4
 UseTab: Never
 TabWidth: 4
-AllowShortFunctionsOnASingleLine: Empty
-AllowShortLambdasOnASingleLine: All
+AllowShortFunctionsOnASingleLine: All
+ColumnLimit: 0
 BreakBeforeBraces: Custom
+BreakConstructorInitializers: AfterColon
 BraceWrapping:
   AfterCaseLabel:  true
   AfterClass:      true
@@ -12,9 +13,9 @@ BraceWrapping:
   # - Never: 永远不, 即永远将语句体的大括号放置于控制语句同一行
   # - MultiLine: 多行控制语句才进行换行
   # - Always: 永远换行, 建议
-  AfterControlStatement: Always
+  AfterControlStatement: MultiLine
   AfterEnum:       true
-  AfterFunction:   false
+  AfterFunction:   true
   AfterNamespace:  true
   AfterObjCDeclaration: true
   AfterStruct:     true
@@ -28,4 +29,3 @@ BraceWrapping:
   SplitEmptyFunction: true
   SplitEmptyRecord: true
   SplitEmptyNamespace: true
-BreakBeforeBinaryOperators: None
