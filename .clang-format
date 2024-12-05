@@ -5,7 +5,6 @@ TabWidth: 4
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortLambdasOnASingleLine: All
 BreakBeforeBraces: Custom
-SplitEmptyFunction: false
 BraceWrapping:
   AfterCaseLabel:  true
   AfterClass:      true
