@@ -1,15 +1,17 @@
 #ifndef SCORES_CONTROLLER_H
 #define SCORES_CONTROLLER_H
 
-#include "../framework/controller.h"
 #include <iostream>
 #include <string>
 
+#include "../framework/controller.h"
+
 using namespace std;
 
-class ScoresController : public Controller {
-public:
-  void f0(string path) override;
+class ScoresController : public Controller
+{
+   public:
+    void f0(string path) override;
 };
 
-#endif // SCORES_CONTROLLER_H
+#endif  // SCORES_CONTROLLER_H

@@ -3,9 +3,10 @@
 
 #include "framework/router.h"
 
-class MyRouter : public Router {
-public:
-  void setupRouting() override;
+class MyRouter : public Router
+{
+   public:
+    void setupRouting() override;
 };
 
-#endif // MYROUTER_H
+#endif  // MYROUTER_H
