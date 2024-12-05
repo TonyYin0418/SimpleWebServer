@@ -2,14 +2,14 @@
 #define COURSES_CONTROLLER_H
 
 #include "../framework/controller.h"
-#include <string>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class CoursesController : public Controller {
 public:
-    void f0(string path) override;
+  void f0(string path) override;
 };
 
 #endif // COURSES_CONTROLLER_H

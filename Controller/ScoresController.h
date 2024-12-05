@@ -2,14 +2,14 @@
 #define SCORES_CONTROLLER_H
 
 #include "../framework/controller.h"
-#include <string>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class ScoresController : public Controller {
 public:
-    void f0(string path) override;
+  void f0(string path) override;
 };
 
 #endif // SCORES_CONTROLLER_H

@@ -5,7 +5,7 @@
 
 class MyRouter : public Router {
 public:
-    void setupRouting() override;
+  void setupRouting() override;
 };
 
 #endif // MYROUTER_H
