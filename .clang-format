@@ -1,0 +1,32 @@
+BasedOnStyle: Google
+IndentWidth: 4
+UseTab: Never
+TabWidth: 4
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: All
+BreakBeforeBraces: Custom
+SplitEmptyFunction: false
+BraceWrapping:
+  AfterCaseLabel:  true
+  AfterClass:      true
+  # 控制语句(if/for/while/switch/...)后是否换行
+  # - Never: 永远不, 即永远将语句体的大括号放置于控制语句同一行
+  # - MultiLine: 多行控制语句才进行换行
+  # - Always: 永远换行, 建议
+  AfterControlStatement: Always
+  AfterEnum:       true
+  AfterFunction:   false
+  AfterNamespace:  true
+  AfterObjCDeclaration: true
+  AfterStruct:     true
+  AfterUnion:      true
+  AfterExternBlock: true
+  BeforeCatch:     false
+  BeforeElse:      true
+  BeforeLambdaBody: false
+  BeforeWhile:     false
+  IndentBraces:    false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+BreakBeforeBinaryOperators: None
