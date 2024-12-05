@@ -9,12 +9,13 @@ void Router::addRouting(string method, string path, Controller* obj, CTRL_FUN fu
     table.push_back(ele);
 }
 
-void Router::handle(string method, string path) {
+bool Router::handle(string method, string path) {
     for (const auto& route : table) {
         if (route.method == method && route.path == path) {
             ((*route.object).*(route.fun))(path);
-            return;
+            return true;
         }
     }
-    cerr << "404 Not Found: " << method << " " << path << endl;
+//    cerr << "404 Not Found: " << method << " " << path << endl;
+    return false;
 }

@@ -21,8 +21,7 @@ class Router {
 public:
     Router();
     virtual void setupRouting() = 0;
-    void handle(string method, string path);
-
+    bool handle(string method, string path);
 private:
     vector<RoutingElement> table;
 
