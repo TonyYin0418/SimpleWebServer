@@ -12,7 +12,8 @@
    public:                  \
     virtual void f##n(string a);
 #define IMPLEMENT_CTRL_FUN(className, n, funName) \
-    void className::f##n(string a) {              \
+    void className::f##n(string a)                \
+    {                                             \
         funName(a);                               \
     }
 #define REGISTER_CTRL_FUN(method, path, className, n) \

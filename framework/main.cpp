@@ -1,6 +1,7 @@
 #include "../MyRouter.h"
 #include "../http_server.h"
-int main() {
+int main()
+{
     MyRouter router;
     router.setupRouting();
     //

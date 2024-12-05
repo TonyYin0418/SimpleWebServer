@@ -4,7 +4,8 @@
 #include "Controller/MainPageController.h"
 #include "Controller/ScoresController.h"
 
-void MyRouter::setupRouting() {
+void MyRouter::setupRouting()
+{
     addRouting("GET", "/index", new MainPageController(),
                (CTRL_FUN)&MainPageController::f0);
     addRouting("GET", "/scores", new ScoresController(),

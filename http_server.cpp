@@ -10,10 +10,11 @@
 
 using namespace std;
 
-httpServer::httpServer(string _ip, int _port, MyRouter &_router)
-    : ip(_ip), port(_port), router(_router) {}
+httpServer::httpServer(string _ip, int _port, MyRouter &_router) :
+    ip(_ip), port(_port), router(_router) {}
 
-void httpServer::run() {
+void httpServer::run()
+{
     int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (serverSocket == -1)
     {
@@ -23,7 +24,7 @@ void httpServer::run() {
 
     sockaddr_in addr = {};
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(port);  // Port number  host to net short
+    addr.sin_port = htons(port);                    // Port number  host to net short
     addr.sin_addr.s_addr = inet_addr("127.0.0.1");  // Localhost address
 
     if (bind(serverSocket, (sockaddr *)&addr, sizeof(sockaddr_in)) == -1)
@@ -59,7 +60,8 @@ void httpServer::run() {
     close(serverSocket);
 }
 
-void httpServer::handleClient(int clientSocket) {
+void httpServer::handleClient(int clientSocket)
+{
     char buffer[1024] = {0};
     ssize_t ret = recv(clientSocket, buffer, sizeof(buffer) - 1, 0);
     if (ret <= 0)
@@ -98,7 +100,8 @@ void httpServer::handleClient(int clientSocket) {
     close(clientSocket);
 }
 
-string httpServer::parseRequestPath(const string &request) {
+string httpServer::parseRequestPath(const string &request)
+{
     // 解析 GET /path HTTP/1.1
     size_t pos1 = request.find(' ');
     if (pos1 == std::string::npos) return "";
@@ -108,7 +111,8 @@ string httpServer::parseRequestPath(const string &request) {
 }
 
 void httpServer::sendResponse(int clientSock, const string &status,
-                              const string &body) {
+                              const string &body)
+{
     std::string response = "HTTP/1.1 " + status +
                            "\r\n"
                            "Content-Length: " +
