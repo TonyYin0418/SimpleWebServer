@@ -15,8 +15,8 @@ class CoursesDao
     };
 
     std::vector<Course> getAllCourses();
-    std::string filename = "../../../../../public/courses.csv"; //For Xcode
-//    std::string filename = "../public/courses.csv"; //For Cmake
+    std::string filename = "../../../../../public/courses.csv";  // For Xcode
+    //    std::string filename = "../public/courses.csv"; //For Cmake
 
    private:
     std::vector<Course> parseCSV(const std::string &filePath);
