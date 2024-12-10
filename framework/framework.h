@@ -22,8 +22,7 @@ struct HttpResponse
 
     string toString() const
     {
-        return "HTTP/1.1 " + to_string(statusCode) + " OK\r\n" +
-               "Content-Type: " + contentType + "\r\n\r\n" + body;
+        return "HTTP/1.1 " + to_string(statusCode) + " OK\r\n" + "Content-Type: " + contentType + "\r\n\r\n" + body;
     }
 };
 

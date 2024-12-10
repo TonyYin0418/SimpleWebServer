@@ -6,11 +6,10 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-std::vector<CoursesDao::Course> CoursesDao::getAllCourses() {
-    return parseCSV(filename);
-}
+std::vector<CoursesDao::Course> CoursesDao::getAllCourses() { return parseCSV(filename); }
 
-std::vector<CoursesDao::Course> CoursesDao::parseCSV(const std::string &filePath) {
+std::vector<CoursesDao::Course> CoursesDao::parseCSV(const std::string &filePath)
+{
     std::vector<Course> courses;
     std::ifstream file(filePath);
     std::string line;
@@ -31,7 +30,8 @@ std::vector<CoursesDao::Course> CoursesDao::parseCSV(const std::string &filePath
             ss >> course.credits;
             courses.push_back(course);
         }
-    } else {
+    }
+    else {
         std::cerr << "Could not open the file " << filePath << std::endl;
     }
 

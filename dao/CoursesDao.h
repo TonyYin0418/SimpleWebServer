@@ -4,9 +4,11 @@
 #include <string>
 #include <vector>
 
-class CoursesDao {
-public:
-    struct Course {
+class CoursesDao
+{
+   public:
+    struct Course
+    {
         std::string name;
         std::string instructor;
         int credits;
@@ -14,10 +16,9 @@ public:
 
     std::vector<Course> getAllCourses();
 
-private:
+   private:
     std::string filename = "./courses.csv";
     std::vector<Course> parseCSV(const std::string &filePath);
 };
-
 
 #endif /* COURSESDAO_H */

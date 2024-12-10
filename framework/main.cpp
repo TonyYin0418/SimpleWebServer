@@ -4,7 +4,7 @@ int main()
 {
     MyRouter router;
     router.setupRouting();
-    
+
     router.handle("GET", "/index");
     router.handle("GET", "/scores");
     router.handle("GET", "/courses");

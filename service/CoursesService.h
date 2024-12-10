@@ -1,17 +1,19 @@
 #ifndef COURSES_SERVICE_H
 #define COURSES_SERVICE_H
 
-#include "../dao/CoursesDao.h"
-#include <vector>
 #include <string>
+#include <vector>
+
+#include "../dao/CoursesDao.h"
 using namespace std;
 
-class CoursesService {
-public:
+class CoursesService
+{
+   public:
     CoursesService(CoursesDao &dao);
     string getCoursesJson();
 
-private:
+   private:
     CoursesDao &dao;
 };
 

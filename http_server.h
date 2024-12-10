@@ -24,8 +24,7 @@ class httpServer
     int port;
     MyRouter &router;
     string parseRequestPath(const std::string &request);
-    void sendResponse(int clientSock, const std::string &status,
-                      const std::string &body);
+    void sendResponse(int clientSock, const std::string &status, const std::string &body);
 
     void handleClient(int clientSocket);
 };
