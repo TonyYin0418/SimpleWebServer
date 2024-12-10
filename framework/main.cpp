@@ -4,8 +4,7 @@ int main()
 {
     MyRouter router;
     router.setupRouting();
-    //
-    //    // Simulating HTTP requests
+    
     router.handle("GET", "/index");
     router.handle("GET", "/scores");
     router.handle("GET", "/courses");

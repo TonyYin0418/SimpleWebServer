@@ -50,6 +50,20 @@
 			);
 			target = 3889BC0C2CF5A6B500732A46 /* main */;
 		};
+		38C421E62D017AF300ED0E34 /* Exceptions for "dao" folder in "main" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CoursesDao.cpp,
+			);
+			target = 3889BC0C2CF5A6B500732A46 /* main */;
+		};
+		38C421EC2D017B5E00ED0E34 /* Exceptions for "service" folder in "main" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CoursesService.cpp,
+			);
+			target = 3889BC0C2CF5A6B500732A46 /* main */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -74,6 +88,27 @@
 			path = test;
 			sourceTree = "<group>";
 		};
+		38C421E22D017ACE00ED0E34 /* dao */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				38C421E62D017AF300ED0E34 /* Exceptions for "dao" folder in "main" target */,
+			);
+			path = dao;
+			sourceTree = "<group>";
+		};
+		38C421E82D017B4F00ED0E34 /* service */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				38C421EC2D017B5E00ED0E34 /* Exceptions for "service" folder in "main" target */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		38C421F02D017D9900ED0E34 /* nlohmann */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = nlohmann;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +129,9 @@
 				3830FFCB2CFFDA610019E065 /* MyRouter.cpp */,
 				38C421BA2D00663B00ED0E34 /* http_server.h */,
 				38C421BB2D00663B00ED0E34 /* http_server.cpp */,
+				38C421F02D017D9900ED0E34 /* nlohmann */,
+				38C421E82D017B4F00ED0E34 /* service */,
+				38C421E22D017ACE00ED0E34 /* dao */,
 				3830FFC52CFFD91B0019E065 /* framework */,
 				3830FFD02CFFDAAD0019E065 /* Controller */,
 				38C421A32D00637700ED0E34 /* main */,
