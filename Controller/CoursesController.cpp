@@ -4,6 +4,6 @@ CoursesController::CoursesController(CoursesService &service) : service(service)
 
 void CoursesController::f0(string path)
 {
-    service.getCoursesJson();
+    cout << service.getCoursesJson() << endl;
     cout << "Displaying course information for path: " << path << endl;
 }
