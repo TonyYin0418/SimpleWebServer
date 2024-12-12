@@ -1,6 +1,6 @@
 #include "CoursesDao.h"
 
-#include <limits.h>  // Required for PATH_MAX
+//#include <limits.h>  // Required for PATH_MAX
 #include <unistd.h>  // Required for getcwd
 
 #include <fstream>

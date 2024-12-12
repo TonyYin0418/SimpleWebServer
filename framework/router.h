@@ -4,33 +4,29 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include <tuple>
+#include <map>
+#include <functional>
 #include "controller.h"
 
 using namespace std;
 
 typedef void (Controller::*CTRL_FUN)(string);
 
-struct RoutingElement
-{
-    string method;
-    string path;
-    Controller *object;
-    CTRL_FUN fun;
-};
-
 class Router
 {
    public:
     Router();
     virtual void setupRouting() = 0;
-    bool handle(string method, string path);
-
+    
    private:
-    vector<RoutingElement> table;
+    using CTRL_FUN = std::function<tuple<string, string, string>()>;
+    map<string, map<string, CTRL_FUN> > routeTable;
 
-   protected:
-    void addRouting(string method, string path, Controller *obj, CTRL_FUN fun);
+
+   public:
+    void addRouting(string method, string path, CTRL_FUN handler);
+    tuple<string, string, string> handle(string method, string path);
 };
 
 #endif  // ROUTER_H

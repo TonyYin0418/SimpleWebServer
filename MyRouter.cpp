@@ -6,11 +6,12 @@
 
 void MyRouter::setupRouting()
 {
-    addRouting("GET", "/index", new MainPageController(), (CTRL_FUN)&MainPageController::f0);
-    addRouting("GET", "/scores", new ScoresController(), (CTRL_FUN)&ScoresController::f0);
-    CoursesDao* courses_dao = new CoursesDao;
-    cout << courses_dao->filename << endl;
-    CoursesService* courses_service = new CoursesService(*courses_dao);
-    addRouting("GET", "/courses", new CoursesController(*courses_service), (CTRL_FUN)&CoursesController::f0);
-    //    REGISTER_CTRL_FUN("GET", "/courses", CoursesController, 0)
+    addRouting("GET", "/courses", [this]() -> tuple<string, string, string> {
+        static CoursesDao courses_dao;
+        static CoursesService courses_service(courses_dao); //注意这里必须加static!!!!!!!!
+        static CoursesController courses_controller(courses_service);
+        return courses_controller.getCourses();
+    });
+//    addRouting("GET", "/scores", new ScoresController(), (CTRL_FUN)&ScoresController::f0);
+//    REGISTER_CTRL_FUN("GET", "/courses", CoursesController, 0)
 }

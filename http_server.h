@@ -18,14 +18,13 @@ class httpServer
    public:
     httpServer(string _ip, int _port, MyRouter &_router);
     void run();
+    void sendResponse(int clientSock, const std::string &status, const std::string &body, const std::string &contentType = "text/plain");
 
    private:
     string ip;
     int port;
     MyRouter &router;
     string parseRequestPath(const std::string &request);
-    void sendResponse(int clientSock, const std::string &status, const std::string &body);
-
     void handleClient(int clientSocket);
 };
 

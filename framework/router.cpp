@@ -4,20 +4,17 @@ using namespace std;
 
 Router::Router() {}
 
-void Router::addRouting(string method, string path, Controller *obj, CTRL_FUN fun)
+void Router::addRouting(string method, string path, CTRL_FUN handler)
 {
-    RoutingElement ele{method, path, obj, fun};
-    table.push_back(ele);
+    routeTable[method][path] = handler;
 }
 
-bool Router::handle(string method, string path)
+tuple<string, string, string> Router::handle(string method, string path)
 {
-    for (const auto &route : table) {
-        if (route.method == method && route.path == path) {
-            ((*route.object).*(route.fun))(path);
-            return true;
+    if(routeTable.count(method)) {
+        if(routeTable[method].count(path)) {
+            return routeTable[method][path]();
         }
     }
-    //    cerr << "404 Not Found: " << method << " " << path << endl;
-    return false;
+    return {"404 Not Found,", "Resource not found", "text/plain"};
 }
