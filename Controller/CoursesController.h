@@ -3,9 +3,9 @@
 
 #include <iostream>
 #include <string>
-#include "../http_server.h"
 
 #include "../framework/controller.h"
+#include "../http_server.h"
 #include "../service/CoursesService.h"
 using namespace std;
 
@@ -15,6 +15,7 @@ class CoursesController : public Controller
     CoursesController(CoursesService &service);
     void f0(string path) override;
     tuple<string, string, string> getCourses();
+
    private:
     CoursesService &service;
 };

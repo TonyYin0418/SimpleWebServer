@@ -68,7 +68,7 @@ void httpServer::handleClient(int clientSocket)
         sendResponse(clientSocket, "400 Bad Request", "Invalid HTTP request");
         return;
     }
-    
+
     // 路由请求
     tuple<string, string, string> result = router.handle(method, path);
     string status = get<0>(result);
@@ -87,15 +87,12 @@ string httpServer::parseRequestPath(const string &request)
     return request.substr(pos1 + 1, pos2 - pos1 - 1);
 }
 
-
-void httpServer::sendResponse(int clientSock, const string &status, const string &body, const string &contentType) {
+void httpServer::sendResponse(int clientSock, const string &status, const string &body, const string &contentType)
+{
     std::string response = "HTTP/1.1 " + status +
                            "\r\n"
                            "Content-Length: " +
-                           std::to_string(body.size()) +
-                           "\r\n" +
-    "Content-Type: " + contentType + "\r\n" + 
-                           "Connection: close\r\n\r\n" +
-                           body;
+                           std::to_string(body.size()) + "\r\n" + "Content-Type: " + contentType + "\r\n" +
+                           "Connection: close\r\n\r\n" + body;
     send(clientSock, response.c_str(), response.size(), 0);
 }
