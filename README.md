@@ -1,6 +1,8 @@
-Simple Web Server
+# A Simple Web Server
 
-This is a simple web server built using C++ that serves data from a CSV file (courses.csv) and displays it in a browser. The server is designed to demonstrate routing, controllers, services, and template rendering in web development. It supports dynamic rendering of HTML content based on data retrieved from the backend.
+This is a simple web server built using C++.
+
+大作业
 
 # Getting Started
 
