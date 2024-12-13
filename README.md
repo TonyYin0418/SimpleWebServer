@@ -24,6 +24,7 @@ cd SimpleWebServer
 mkdir build
 cd build
 cmake ..
+make
 ```
 3.	After building, you can run the server:
 ```
