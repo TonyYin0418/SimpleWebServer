@@ -5,13 +5,15 @@
 #include <vector>
 
 #include "../dao/CoursesDao.h"
+#include "../nlohmann/json.hpp"  // 使用 nlohmann JSON 库来生成 JSON 格式的响应
+
 using namespace std;
 
 class CoursesService
 {
    public:
     CoursesService(CoursesDao &dao);
-    string getCoursesJson();
+    nlohmann::json getCoursesJson();
 
    private:
     CoursesDao &dao;

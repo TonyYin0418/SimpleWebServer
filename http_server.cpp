@@ -6,7 +6,7 @@
 #include <unistd.h>  // For close
 
 #include <iostream>
-#include <string>  //For memset
+#include <string>
 
 using namespace std;
 
@@ -26,7 +26,7 @@ void httpServer::run()
     addr.sin_addr.s_addr = inet_addr("127.0.0.1");  // Localhost address
     // to check port:     lsof -i :9870
 
-    if (::bind(serverSocket, (sockaddr *)&addr, sizeof(sockaddr_in)) == -1) {
+    if (::bind(serverSocket, (sockaddr *)&addr, sizeof(sockaddr_in)) == -1) { //::bind是因为，我引入了std库，会与之冲突，导致随机编译错误。！！！！
         cerr << "Failed to bind port number" << endl;
         close(serverSocket);
         return;

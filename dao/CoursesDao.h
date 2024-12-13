@@ -9,9 +9,11 @@ class CoursesDao
    public:
     struct Course
     {
+        std::string number;
         std::string name;
-        std::string instructor;
-        int credits;
+        std::string time;
+        std::string teacher;
+        std::string location;
     };
 
     std::vector<Course> getAllCourses();

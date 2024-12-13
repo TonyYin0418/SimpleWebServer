@@ -44,6 +44,7 @@
 		3830FFE32CFFDB570019E065 /* Exceptions for "framework" folder in "main" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				controller.cpp,
 				http.cpp,
 				main.cpp,
 				router.cpp,
@@ -109,6 +110,16 @@
 			path = nlohmann;
 			sourceTree = "<group>";
 		};
+		38D1A6092D0ACD3D00B9978E /* view */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = view;
+			sourceTree = "<group>";
+		};
+		38D1A60E2D0ACDCD00B9978E /* public */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = public;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,12 +140,14 @@
 				3830FFCB2CFFDA610019E065 /* MyRouter.cpp */,
 				38C421BA2D00663B00ED0E34 /* http_server.h */,
 				38C421BB2D00663B00ED0E34 /* http_server.cpp */,
+				38D1A6092D0ACD3D00B9978E /* view */,
 				38C421F02D017D9900ED0E34 /* nlohmann */,
 				38C421E82D017B4F00ED0E34 /* service */,
 				38C421E22D017ACE00ED0E34 /* dao */,
 				3830FFC52CFFD91B0019E065 /* framework */,
 				3830FFD02CFFDAAD0019E065 /* Controller */,
 				38C421A32D00637700ED0E34 /* main */,
+				38D1A60E2D0ACDCD00B9978E /* public */,
 				38C421C52D0069AB00ED0E34 /* test */,
 			);
 			sourceTree = "<group>";

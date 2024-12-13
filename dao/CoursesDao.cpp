@@ -25,9 +25,13 @@ std::vector<CoursesDao::Course> CoursesDao::parseCSV(const std::string &filePath
         while (std::getline(file, line)) {
             std::stringstream ss(line);
             Course course;
+            std::getline(ss, course.number, ',');
             std::getline(ss, course.name, ',');
-            std::getline(ss, course.instructor, ',');
-            ss >> course.credits;
+            std::getline(ss, course.time, ',');
+            std::getline(ss, course.teacher, ',');
+            std::getline(ss, course.location, ',');
+
+//            ss >> course.credits;
             courses.push_back(course);
         }
     }
