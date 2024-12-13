@@ -31,7 +31,7 @@ std::vector<CoursesDao::Course> CoursesDao::parseCSV(const std::string &filePath
             std::getline(ss, course.teacher, ',');
             std::getline(ss, course.location, ',');
 
-//            ss >> course.credits;
+            //            ss >> course.credits;
             courses.push_back(course);
         }
     }

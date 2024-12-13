@@ -13,10 +13,11 @@ class CoursesController : public Controller
 {
    public:
     CoursesController(CoursesService &service);
-//    void f0(string path) override;
+    //    void f0(string path) override;
     tuple<string, string, string> getResponse();
     string getHtmlRows(const nlohmann::json &jsonData);
-    private:
+
+   private:
     CoursesService &service;
 };
 
