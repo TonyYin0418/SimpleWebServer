@@ -4,10 +4,10 @@
 #include <functional>
 #include <iostream>
 #include <map>
+#include <regex>
 #include <string>
 #include <tuple>
 #include <vector>
-#include <regex>
 
 #include "controller.h"
 
@@ -22,7 +22,7 @@ class Router
     virtual void setupRouting() = 0;
 
    private:
-    map<string, map<string, CTRL_FUN> > routeTable; //method, path, handler
+    map<string, map<string, CTRL_FUN> > routeTable;  // method, path, handler
     map<string, vector<pair<regex, CTRL_FUN> > > dynamicRouteTable;
 
    public:

@@ -9,13 +9,13 @@
 #include "service/ScoresService.h"
 
 // MyRouter::MyRouter() :
-    // courses_dao(),
-    // scores_dao(),
-    // courses_service(courses_dao),
-    // scores_service(scores_dao),
-    // courses_controller(courses_service),
-    // scores_controller(scores_service),
-    // mainpage_controller()
+// courses_dao(),
+// scores_dao(),
+// courses_service(courses_dao),
+// scores_service(scores_dao),
+// courses_controller(courses_service),
+// scores_controller(scores_service),
+// mainpage_controller()
 // {}
 
 void MyRouter::setupRouting()
@@ -28,19 +28,16 @@ void MyRouter::setupRouting()
     static ScoresService scores_service(scores_dao);
     static ScoresController scores_controller(scores_service);
     //  首页
-    addRouting("GET", "/", [this](const smatch &) -> tuple<string, string, string> {
-        return mainpage_controller.getResponse();
-    });
+    addRouting("GET", "/",
+               [this](const smatch &) -> tuple<string, string, string> { return mainpage_controller.getResponse(); });
 
     //  课
-    addRouting("GET", "/courses", [this](const smatch &) -> tuple<string, string, string> {
-        return courses_controller.getResponse(); 
-    });
-    
+    addRouting("GET", "/courses",
+               [this](const smatch &) -> tuple<string, string, string> { return courses_controller.getResponse(); });
+
     // 成绩
-    addRouting("GET", "/scores", [this](const smatch &) -> tuple<string, string, string> {
-        return scores_controller.getResponse_All();
-    });
+    addRouting("GET", "/scores",
+               [this](const smatch &) -> tuple<string, string, string> { return scores_controller.getResponse_All(); });
 
     // 动态路由
     addRouting("GET", "/scorebystudent/:stuID", [this](const smatch &match) -> tuple<string, string, string> {

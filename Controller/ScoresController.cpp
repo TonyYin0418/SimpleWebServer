@@ -2,7 +2,7 @@
 
 ScoresController::ScoresController(ScoresService &service) : service(service) {}
 
-//const string templatePath = "../view/scores.html"; //For Cmake
+// const string templatePath = "../view/scores.html"; //For Cmake
 const string templatePath = "../../../../../view/scores.html";  // For Xcode
 
 tuple<string, string, string> ScoresController::getResponse_All()

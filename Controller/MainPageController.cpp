@@ -3,12 +3,11 @@
 #include <fstream>
 #include <iostream>
 
-//const string templatePath = "../view/index.html"; //For Cmake
+// const string templatePath = "../view/index.html"; //For Cmake
 const string templatePath = "../../../../../view/index.html";  // For Xcode
 
 tuple<string, string, string> MainPageController::getResponse()
 {
-
     ifstream file(templatePath);
     if (!file.is_open()) return make_tuple("404 Not Found", "没打开index.html", "text/plain");
     ;
