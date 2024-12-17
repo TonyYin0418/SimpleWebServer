@@ -11,7 +11,7 @@ using namespace std;
 class MainPageController : public Controller
 {
    public:
-    void f0(string path) override;
+    tuple<string, string, string> getResponse();
 };
 
 #endif  // MAIN_PAGE_CONTROLLER_H
