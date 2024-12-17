@@ -31,11 +31,8 @@ string ScoresController::getHtmlRows(const nlohmann::json &jsonData)
 {
     string rows = "";
     for (auto &score : jsonData) {
-        rows = rows + "<tr>" +
-               "<td>" + score["stu_id"].get<string>() + "</td>" +
-               "<td>" + score["course_id"].get<string>() + "</td>" +
-               "<td>" + score["score"].get<string>() + "</td>" +
-               "</tr>\n";
+        rows = rows + "<tr>" + "<td>" + score["stu_id"].get<string>() + "</td>" + "<td>" +
+               score["course_id"].get<string>() + "</td>" + "<td>" + score["score"].get<string>() + "</td>" + "</tr>\n";
     }
     return rows;
 }

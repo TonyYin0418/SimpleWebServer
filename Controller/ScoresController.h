@@ -11,13 +11,13 @@ using namespace std;
 
 class ScoresController : public Controller
 {
-public:
+   public:
     ScoresController(ScoresService &service);
     tuple<string, string, string> getResponse_All();
     tuple<string, string, string> getResponse_byStu(string stuId);
     tuple<string, string, string> getResponse_byCourse(string courseID);
-    
-private:
+
+   private:
     string getHtmlRows(const nlohmann::json &jsonData);
     ScoresService &service;
 };
