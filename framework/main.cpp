@@ -9,8 +9,8 @@ int main()
     //    router.handle("GET", "/scores");
     router.handle("GET", "/courses");
 
-    httpServer server("127.0.0.1", 9870, router);
-    server.run();
+     httpServer server("127.0.0.1", 9870, router);
+     server.run();
 
     return 0;
 }

@@ -2,14 +2,15 @@
 
 CoursesController::CoursesController(CoursesService &service) : service(service) {}
 
+//const string templatePath = "../view/courses.html"; //For Cmake
+const string templatePath = "../../../../../view/courses.html";  // For Xcode
+
+
 tuple<string, string, string> CoursesController::getResponse()
 {
     nlohmann::json jsonData = service.getCoursesJson();
     //    cout << data << endl;
     //    return make_tuple("200 OK", data, "application/json");
-
-    //    string templatePath = "../view/courses.html"; //For Cmake
-    string templatePath = "../../../../../view/courses.html";  // For Xcode
     map<string, string> placeholders = {{"{{COURSES}}", getHtmlRows(jsonData)}};
     return make_tuple("200 OK", renderHTML(templatePath, placeholders), "text/html");
 }

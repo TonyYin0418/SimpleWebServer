@@ -7,12 +7,13 @@
 #include <string>
 #include <tuple>
 #include <vector>
+#include <regex>
 
 #include "controller.h"
 
 using namespace std;
 
-typedef void (Controller::*CTRL_FUN)(string);
+using CTRL_FUN = function<tuple<string, string, string>(const smatch&)>;
 
 class Router
 {
@@ -21,8 +22,8 @@ class Router
     virtual void setupRouting() = 0;
 
    private:
-    using CTRL_FUN = std::function<tuple<string, string, string>()>;
-    map<string, map<string, CTRL_FUN> > routeTable;
+    map<string, map<string, CTRL_FUN> > routeTable; //method, path, handler
+    map<string, vector<pair<regex, CTRL_FUN> > > dynamicRouteTable;
 
    public:
     void addRouting(string method, string path, CTRL_FUN handler);

@@ -23,7 +23,7 @@ using namespace std;
 class Controller
 {
    public:
-    string renderHTML(string &templatePath, map<string, string> &placeHoldersTable);
+    string renderHTML(const string &templatePath, map<string, string> &placeHoldersTable);
     virtual void f0(string path) {}
     //    virtual void f1(string path) {}
     //    virtual void f2(string path) {}

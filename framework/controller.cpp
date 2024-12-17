@@ -4,7 +4,7 @@
 #include <iostream>
 
 // 利用map，把html模板里面的{{xxxxxx}}替换掉
-string Controller::renderHTML(string &templatePath, map<string, string> &placeHoldersTable)
+string Controller::renderHTML(const string &templatePath, map<string, string> &placeHoldersTable)
 {
     // 把template文件内容全读到std::string中，这样无需分块读取
     ifstream file(templatePath);

@@ -8,6 +8,8 @@
 #include <iostream>
 #include <string>
 
+#include "MyRouter.h"
+
 using namespace std;
 
 httpServer::httpServer(string _ip, int _port, MyRouter &_router) : ip(_ip), port(_port), router(_router) {}
@@ -82,9 +84,9 @@ string httpServer::parseRequestPath(const string &request)
 {
     // 解析 GET /path HTTP/1.1
     size_t pos1 = request.find(' ');
-    if (pos1 == std::string::npos) return "";
+    if (pos1 == std::string::npos) return "";  // pos1 == std::string::npos == -1
     size_t pos2 = request.find(' ', pos1 + 1);
-    if (pos2 == std::string::npos) return "";
+    if (pos2 == std::string::npos) return "";  // pos1 == std::string::npos == -1
     return request.substr(pos1 + 1, pos2 - pos1 - 1);
 }
 
