@@ -3,8 +3,8 @@
 #include <fstream>
 #include <iostream>
 
-// const string templatePath = "../view/index.html"; //For Cmake
-const string templatePath = "../../../../../view/index.html";  // For Xcode
+const string templatePath = "view/index.html"; //For Cmake
+//const string templatePath = "../../../../../view/index.html";  // For Xcode
 
 tuple<string, string, string> MainPageController::getResponse()
 {

@@ -2,8 +2,8 @@
 
 CoursesController::CoursesController(CoursesService &service) : service(service) {}
 
-// const string templatePath = "../view/courses.html"; //For Cmake
-const string templatePath = "../../../../../view/courses.html";  // For Xcode
+ const string templatePath = "view/courses.html"; //For Cmake
+//const string templatePath = "../../../../../view/courses.html";  // For Xcode
 
 tuple<string, string, string> CoursesController::getResponse()
 {

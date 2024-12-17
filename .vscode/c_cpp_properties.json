@@ -1,0 +1,20 @@
+// INFO 此文件设定使用 clang 的路径和参数。
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang++"  // ATTENTION！！这里需要确定改成你的clang++路径（Mac/Linux 下可以使用 [where clang] 的命令行找到。）
+        }
+    ],
+    "version": 4
+}

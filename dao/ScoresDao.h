@@ -22,8 +22,8 @@ class ScoresDao
     };
 
     std::vector<Score> getAllScores();
-    std::string filename = "../../../../../public/scores.csv";  // For Xcode
-    //    std::string filename = "../public/scores.csv"; //For Cmake
+//    std::string filename = "../../../../../public/scores.csv";  // For Xcode
+    std::string filename = "public/scores.csv"; //For Cmake
 
    private:
     std::vector<Score> parseCSV(const std::string &filePath);

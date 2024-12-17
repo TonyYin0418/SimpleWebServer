@@ -3,5 +3,19 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
-}
+    "configurations": [
+      {
+        "name": "Debug Entrance",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/webServer",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "lldb",
+        "preLaunchTask": "build"  // INFO 前置任务，对应 tasks.json；
+      }
+    ]
+  }
