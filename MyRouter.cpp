@@ -20,7 +20,6 @@ void MyRouter::setupRouting()
         return courses_controller.getResponse();
     });
 
-
     //    addRouting("GET", "/scores", new ScoresController(), (CTRL_FUN)&ScoresController::f0);
     //    REGISTER_CTRL_FUN("GET", "/courses", CoursesController, 0)
 }
