@@ -15,8 +15,9 @@ string Controller::renderHTML(string &templatePath, map<string, string> &placeHo
 
     // 下面进行替换
     for (const auto &[key, value] : placeHoldersTable) {
-        std::cout << "key: " << key << std::endl;
-        std::cout << "value: " << value << std::endl;
+        std::cout << "Dir: framework/controller.cpp\n";
+        std::cout << "\tkey: " << key << std::endl;
+        std::cout << "\tvalue: " << value << std::endl;
         size_t pos = content.find(key);
         while (pos != string::npos) {
             content.replace(pos, key.length(), value);

@@ -55,6 +55,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				CoursesDao.cpp,
+				ScoresDao.cpp,
 			);
 			target = 3889BC0C2CF5A6B500732A46 /* main */;
 		};
@@ -62,6 +63,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				CoursesService.cpp,
+				ScoresService.cpp,
 			);
 			target = 3889BC0C2CF5A6B500732A46 /* main */;
 		};

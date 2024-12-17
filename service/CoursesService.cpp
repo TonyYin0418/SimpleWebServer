@@ -19,5 +19,5 @@ nlohmann::json CoursesService::getCoursesJson()
                      {"location", course.location}});
     }
 
-    return j;  // 转换为字符串
+    return j;  // 不用转换为string，直接返回json
 }
