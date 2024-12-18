@@ -75,6 +75,13 @@ void httpServer::handleClient(int clientSocket)
         return;
     }
 
+    // 解析query parameters，并且把path只保留到?之前
+    map<string, string> queryParams = parseQueryParams(path);
+    size_t queryPos = path.find('?');
+    if(queryPos != string::npos) {
+        path = path.substr(0, queryPos);
+    }
+
     // 静态资源请求
     if (path.find("/public/") != string::npos) {
         string filePath = path;
@@ -92,7 +99,6 @@ void httpServer::handleClient(int clientSocket)
         file.close();
     }
 
-    map<string, string> queryParams = parseQueryParams(request); 
     // 路由请求
     tuple<string, string, string> result = router.handle(method, path, queryParams);
     string status = get<0>(result);
@@ -150,6 +156,9 @@ map<string, string> httpServer::parseQueryParams(const string &path) { // 解析
             queryParams[key] = value;
             start = end + 1;
         }
+    }
+    for(auto p : queryParams) {
+        cout << p.first << " : " << p.second << endl;
     }
     return queryParams;
 }

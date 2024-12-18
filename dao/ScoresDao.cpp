@@ -1,7 +1,5 @@
 #include "ScoresDao.h"
 
-#include <unistd.h>  // Required for getcwd
-
 #include <fstream>
 #include <iostream>
 #include <sstream>

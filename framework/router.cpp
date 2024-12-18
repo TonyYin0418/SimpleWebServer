@@ -33,7 +33,7 @@ tuple<string, string, string> Router::handle(string method, string path, map<str
             // item.first -> 带路径前缀的匹配模式，item.second -> handler
             smatch match;
             if (regex_match(path, match, item.first)) {
-                return item.second(match, queryParams); //queryParams目前是空的，但可以加功能
+                return item.second(match, {}); //queryParams目前是空的，但可以加功能
             }
             // regex_match后，match[0]是整个匹配的字符串(==path)，match[1]是第一个括号匹配的字符串，match[2]是第二个括号匹配的字符串
         }

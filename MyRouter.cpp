@@ -3,6 +3,7 @@
 #include "controller/CoursesController.h"
 #include "controller/MainPageController.h"
 #include "controller/ScoresController.h"
+#include "controller/StudentsController.h"
 
 // MyRouter::MyRouter() :
 // courses_dao(),
@@ -23,6 +24,10 @@ void MyRouter::setupRouting()
     static ScoresDao scores_dao;
     static ScoresService scores_service(scores_dao);
     static ScoresController scores_controller(scores_service);
+    static StudentsDao students_dao;
+    static StudentsService students_service(students_dao);
+    static StudentsController students_controller(students_service);
+
     //  首页
     addRouting("GET", "/", [this](const smatch &, const map<string, string> &) -> tuple<string, string, string> {
         return mainpage_controller.getResponse();
@@ -48,6 +53,10 @@ void MyRouter::setupRouting()
                    return scores_controller.getResponse_byCourse(match[1].str());
                });
 
+    // 学生
+    addRouting("GET", "/students", [this](const smatch &, const map<string, string> &queryParams) -> tuple<string, string, string> {
+        return students_controller.getResponse(queryParams);
+    });
 
 }
 
