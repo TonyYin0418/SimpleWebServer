@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 #include "MyRouter.h"
 
@@ -67,9 +68,29 @@ void httpServer::handleClient(int clientSocket)
     string request(buffer);
     string method = "GET";
     string path = parseRequestPath(request);
+
+    // 无效请求
     if (path.empty()) {
         sendResponse(clientSocket, "400 Bad Request", "Invalid HTTP request");
         return;
+    }
+
+    // 静态资源请求
+    if (path.find("/public/") != string::npos) {
+        string filePath = path;
+        filePath.erase(0, 1);
+        ifstream file(filePath);
+        cout << filePath << endl; 
+        if (file.is_open())
+        {
+            string content((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
+            sendResponse(clientSocket, "200 OK", content, getContentType(filePath));
+        }
+        else {
+            cout << "!!!!!\n";
+            sendResponse(clientSocket, "404 Not Found", "File not found");
+        }
+        file.close();
     }
 
     // 路由请求
@@ -98,4 +119,15 @@ void httpServer::sendResponse(int clientSock, const string &status, const string
                            std::to_string(body.size()) + "\r\n" + "Content-Type: " + contentType + "\r\n" +
                            "Connection: close\r\n\r\n" + body;
     send(clientSock, response.c_str(), response.size(), 0);
+}
+
+string httpServer::getContentType(const string &filePath)
+{
+    if (filePath.find(".html") != string::npos) return "text/html";
+    if (filePath.find(".css") != string::npos) return "text/css";
+    if (filePath.find(".js") != string::npos) return "application/javascript";
+    if (filePath.find(".png") != string::npos) return "image/png";
+    if (filePath.find(".jpg") != string::npos) return "image/jpeg";
+    if (filePath.find(".gif") != string::npos) return "image/gif";
+    return "text/plain";
 }

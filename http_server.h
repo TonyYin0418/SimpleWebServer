@@ -28,6 +28,7 @@ class httpServer
     MyRouter &router;
     string parseRequestPath(const std::string &request);
     void handleClient(int clientSocket);
+    string getContentType(const string &filePath);
 };
 
 #endif /* HTTP_SERVER_H */
