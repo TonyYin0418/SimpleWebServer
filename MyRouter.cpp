@@ -1,8 +1,8 @@
 #include "MyRouter.h"
 
-#include "Controller/CoursesController.h"
-#include "Controller/MainPageController.h"
-#include "Controller/ScoresController.h"
+#include "controller/CoursesController.h"
+#include "controller/MainPageController.h"
+#include "controller/ScoresController.h"
 #include "dao/CoursesDao.h"
 #include "dao/ScoresDao.h"
 #include "service/CoursesService.h"

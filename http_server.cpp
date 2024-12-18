@@ -120,7 +120,7 @@ void httpServer::sendResponse(int clientSock, const string &status, const string
     send(clientSock, response.c_str(), response.size(), 0);
 }
 
-string httpServer::getContentType(const string &filePath)
+string httpServer::getContentType(const string &filePath) //给静态资源文件找对应的Content-Type
 {
     if (filePath.find(".html") != string::npos) return "text/html";
     if (filePath.find(".css") != string::npos) return "text/css";
