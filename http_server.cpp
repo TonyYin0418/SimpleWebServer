@@ -78,7 +78,7 @@ void httpServer::handleClient(int clientSocket)
     // 解析query parameters，并且把path只保留到?之前
     map<string, string> queryParams = parseQueryParams(path);
     size_t queryPos = path.find('?');
-    if(queryPos != string::npos) {
+    if (queryPos != string::npos) {
         path = path.substr(0, queryPos);
     }
 
@@ -138,11 +138,12 @@ string httpServer::getContentType(const string &filePath)  // 给静态资源文
     return "text/plain";
 }
 
-map<string, string> httpServer::parseQueryParams(const string &path) { // 解析query parameters，未来可用正则表达式改写
+map<string, string> httpServer::parseQueryParams(const string &path)
+{  // 解析query parameters，未来可用正则表达式改写
     // 在server中解析query参数（并不影响路由转发），在router中解析path参数（是地址的一部分）
     map<string, string> queryParams;
     size_t pos = path.find('?');
-    if(pos != string::npos) {
+    if (pos != string::npos) {
         size_t start = pos + 1;
         while (start < path.length()) {
             // 找分隔符位置
@@ -157,7 +158,7 @@ map<string, string> httpServer::parseQueryParams(const string &path) { // 解析
             start = end + 1;
         }
     }
-    for(auto p : queryParams) {
+    for (auto p : queryParams) {
         cout << p.first << " : " << p.second << endl;
     }
     return queryParams;

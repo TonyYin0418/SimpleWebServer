@@ -30,7 +30,7 @@ std::vector<StudentsDao::Student> StudentsDao::parseCSV(const std::string &fileP
             student.age = std::stoi(tmp);
 
             std::getline(ss, student.sex, ',');
-            
+
             students.push_back(student);
         }
     }

@@ -54,10 +54,10 @@ void MyRouter::setupRouting()
                });
 
     // 学生
-    addRouting("GET", "/students", [this](const smatch &, const map<string, string> &queryParams) -> tuple<string, string, string> {
-        return students_controller.getResponse(queryParams);
-    });
-
+    addRouting("GET", "/students",
+               [this](const smatch &, const map<string, string> &queryParams) -> tuple<string, string, string> {
+                   return students_controller.getResponse(queryParams);
+               });
 }
 
 /*
