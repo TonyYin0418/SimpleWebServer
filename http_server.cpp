@@ -5,9 +5,9 @@
 #include <sys/socket.h>
 #include <unistd.h>  // For close
 
+#include <fstream>
 #include <iostream>
 #include <string>
-#include <fstream>
 
 #include "MyRouter.h"
 
@@ -80,9 +80,8 @@ void httpServer::handleClient(int clientSocket)
         string filePath = path;
         filePath.erase(0, 1);
         ifstream file(filePath);
-        cout << filePath << endl; 
-        if (file.is_open())
-        {
+        cout << filePath << endl;
+        if (file.is_open()) {
             string content((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
             sendResponse(clientSocket, "200 OK", content, getContentType(filePath));
         }
