@@ -13,7 +13,7 @@
 
 using namespace std;
 
-using CTRL_FUN = function<tuple<string, string, string>(const smatch&)>;
+using CTRL_FUN = function<tuple<string, string, string>(const smatch&, const map<string, string>&)>;
 
 class Router
 {
@@ -27,7 +27,7 @@ class Router
 
    public:
     void addRouting(string method, string path, CTRL_FUN handler);
-    tuple<string, string, string> handle(string method, string path);
+    tuple<string, string, string> handle(string method, string path, map<string, string> queryParams);
 };
 
 #endif  // ROUTER_H

@@ -29,6 +29,7 @@ class httpServer
     string parseRequestPath(const std::string &request);
     void handleClient(int clientSocket);
     string getContentType(const string &filePath);
+    map<string, string> parseQueryParams(const string &path);
 };
 
 #endif /* HTTP_SERVER_H */

@@ -17,12 +17,13 @@ void Router::addRouting(string method, string path, CTRL_FUN handler)
     }
 }
 
-tuple<string, string, string> Router::handle(string method, string path)  // 通过method和path找到对应的handler，然后执行
+tuple<string, string, string> Router::handle(string method, string path, map<string, string> queryParams)  // 通过method和path找到对应的handler，然后执行
 {
+
     // 静
     if (routeTable.count(method)) {
         if (routeTable[method].count(path)) {
-            return routeTable[method][path](smatch{});
+            return routeTable[method][path](smatch{}, queryParams); //smatch{}是空的
         }
     }
     // 动
@@ -32,7 +33,7 @@ tuple<string, string, string> Router::handle(string method, string path)  // 通
             // item.first -> 带路径前缀的匹配模式，item.second -> handler
             smatch match;
             if (regex_match(path, match, item.first)) {
-                return item.second(match);
+                return item.second(match, queryParams); //queryParams目前是空的，但可以加功能
             }
             // regex_match后，match[0]是整个匹配的字符串(==path)，match[1]是第一个括号匹配的字符串，match[2]是第二个括号匹配的字符串
         }

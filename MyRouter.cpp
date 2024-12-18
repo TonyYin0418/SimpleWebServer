@@ -3,10 +3,6 @@
 #include "controller/CoursesController.h"
 #include "controller/MainPageController.h"
 #include "controller/ScoresController.h"
-#include "dao/CoursesDao.h"
-#include "dao/ScoresDao.h"
-#include "service/CoursesService.h"
-#include "service/ScoresService.h"
 
 // MyRouter::MyRouter() :
 // courses_dao(),
@@ -28,24 +24,31 @@ void MyRouter::setupRouting()
     static ScoresService scores_service(scores_dao);
     static ScoresController scores_controller(scores_service);
     //  首页
-    addRouting("GET", "/",
-               [this](const smatch &) -> tuple<string, string, string> { return mainpage_controller.getResponse(); });
+    addRouting("GET", "/", [this](const smatch &, const map<string, string> &) -> tuple<string, string, string> {
+        return mainpage_controller.getResponse();
+    });
 
     //  课
-    addRouting("GET", "/courses",
-               [this](const smatch &) -> tuple<string, string, string> { return courses_controller.getResponse(); });
+    addRouting("GET", "/courses", [this](const smatch &, const map<string, string> &) -> tuple<string, string, string> {
+        return courses_controller.getResponse();
+    });
 
     // 成绩
-    addRouting("GET", "/scores",
-               [this](const smatch &) -> tuple<string, string, string> { return scores_controller.getResponse_All(); });
+    addRouting("GET", "/scores", [this](const smatch &, const map<string, string> &) -> tuple<string, string, string> {
+        return scores_controller.getResponse_All();
+    });
 
-    // 动态路由
-    addRouting("GET", "/scorebystudent/:stuID", [this](const smatch &match) -> tuple<string, string, string> {
-        return scores_controller.getResponse_byStu(match[1].str());
-    });
-    addRouting("GET", "/scorebycourse/:courseID", [this](const smatch &match) -> tuple<string, string, string> {
-        return scores_controller.getResponse_byCourse(match[1].str());
-    });
+    // 成绩的动态路由
+    addRouting("GET", "/scorebystudent/:stuID",
+               [this](const smatch &match, const map<string, string> &) -> tuple<string, string, string> {
+                   return scores_controller.getResponse_byStu(match[1].str());
+               });
+    addRouting("GET", "/scorebycourse/:courseID",
+               [this](const smatch &match, const map<string, string> &) -> tuple<string, string, string> {
+                   return scores_controller.getResponse_byCourse(match[1].str());
+               });
+
+
 }
 
 /*

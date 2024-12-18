@@ -92,8 +92,9 @@ void httpServer::handleClient(int clientSocket)
         file.close();
     }
 
+    map<string, string> queryParams = parseQueryParams(request); 
     // 路由请求
-    tuple<string, string, string> result = router.handle(method, path);
+    tuple<string, string, string> result = router.handle(method, path, queryParams);
     string status = get<0>(result);
     string body = get<1>(result);
     string contentType = get<2>(result);
@@ -129,4 +130,26 @@ string httpServer::getContentType(const string &filePath)  // 给静态资源文
     if (filePath.find(".jpg") != string::npos) return "image/jpeg";
     if (filePath.find(".gif") != string::npos) return "image/gif";
     return "text/plain";
+}
+
+map<string, string> httpServer::parseQueryParams(const string &path) { // 解析query parameters，未来可用正则表达式改写
+    // 在server中解析query参数（并不影响路由转发），在router中解析path参数（是地址的一部分）
+    map<string, string> queryParams;
+    size_t pos = path.find('?');
+    if(pos != string::npos) {
+        size_t start = pos + 1;
+        while (start < path.length()) {
+            // 找分隔符位置
+            size_t end = path.find('&', start);
+            if (end == string::npos) end = path.length();
+            size_t mid = path.find('=', start);
+            if (mid == string::npos || mid >= end) break;
+            // 找到了 && 合法
+            string key = path.substr(start, mid - start);
+            string value = path.substr(mid + 1, end - mid - 1);
+            queryParams[key] = value;
+            start = end + 1;
+        }
+    }
+    return queryParams;
 }
