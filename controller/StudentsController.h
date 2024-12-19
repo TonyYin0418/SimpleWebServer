@@ -16,6 +16,7 @@ class StudentsController : public Controller
     tuple<string, string, string> getResponse(const map<string, string> &queryParams);
 
    private:
+    string getHtmlRange(const nlohmann::json &jsonData);
     string getHtmlRows(const nlohmann::json &jsonData);
     StudentsService &service;
 };
