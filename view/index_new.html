@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Main Page</h1>
+        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+            <el-menu-item index="1"><router-link to="/students">All Students</router-link></el-menu-item>
+            <el-menu-item index="2"><router-link to="/students?agefrom=20&ageto=22">Students between 20 and 22 years
+                    old</router-link></el-menu-item>
+            <el-menu-item index="3"><router-link to="/courses">All Courses</router-link></el-menu-item>
+            <el-menu-item index="4"><router-link to="/scores">All Scores</router-link></el-menu-item>
+            <el-menu-item index="5"><router-link to="/scorebystudent/10001">Student 10001
+                    scores</router-link></el-menu-item>
+            <el-menu-item index="6"><router-link to="/scorebycourse/102">Course 102 scores</router-link></el-menu-item>
+        </el-menu>
+        <el-main>
+            <el-container>
+                <el-header>
+                    <h2>{{ title }}</h2>
+                </el-header>
+                <el-main>
+                    <router-view></router-view>
+                </el-main>
+            </el-container>
+        </el-main>
+    </div>
+
+    <script>
+        const Students = { template: '<div>All Students</div>' };
+        const StudentsRange = { template: '<div>Students between 20 and 22 years old</div>' };
+        const Courses = { template: '<div>All Courses</div>' };
+        const Scores = { template: '<div>All Scores</div>' };
+        const StudentScores = { template: '<div>Student 10001 scores</div>' };
+        const CourseScores = { template: '<div>Course 102 scores</div>' };
+
+        const routes = [
+            { path: '/students', component: Students },
+            { path: '/students?agefrom=20&ageto=22', component: StudentsRange },
+            { path: '/courses', component: Courses },
+            { path: '/scores', component: Scores },
+            { path: '/scorebystudent/10001', component: StudentScores },
+            { path: '/scorebycourse/102', component: CourseScores }
+        ];
+
+        const router = new VueRouter({
+            routes
+        });
+
+        new Vue({
+            el: '#app',
+            router,
+            data: {
+                activeIndex: '1',
+                title: 'Welcome to the Main Page',
+                description: 'Please select a menu item to view details.'
+            },
+            methods: {
+                handleSelect(key, keyPath) {
+                    this.activeIndex = key;
+                    switch (key) {
+                        case '1':
+                            this.title = 'All Students';
+                            this.description = 'View all students.';
+                            break;
+                        case '2':
+                            this.title = 'Students between 20 and 22 years old';
+                            this.description = 'View students aged between 20 and 22.';
+                            break;
+                        case '3':
+                            this.title = 'All Courses';
+                            this.description = 'View all courses.';
+                            break;
+                        case '4':
+                            this.title = 'All Scores';
+                            this.description = 'View all scores.';
+                            break;
+                        case '5':
+                            this.title = 'Student 10001 scores';
+                            this.description = 'View scores for student 10001.';
+                            break;
+                        case '6':
+                            this.title = 'Course 102 scores';
+                            this.description = 'View scores for course 102.';
+                            break;
+                        default:
+                            this.title = 'Welcome to the Main Page';
+                            this.description = 'Please select a menu item to view details.';
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

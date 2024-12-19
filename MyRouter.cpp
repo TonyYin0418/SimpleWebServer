@@ -28,6 +28,11 @@ void MyRouter::setupRouting()
     static StudentsService students_service(students_dao);
     static StudentsController students_controller(students_service);
 
+    addRouting("GET", "/refresh", [this](const smatch &, const map<string, string> &) -> tuple<string, string, string> {
+        system("./gen");
+        return { "200 OK,", "Refresh Done", "text/plain" };
+    });
+
     //  首页
     addRouting("GET", "/", [this](const smatch &, const map<string, string> &) -> tuple<string, string, string> {
         return mainpage_controller.getResponse();
