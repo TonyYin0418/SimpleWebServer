@@ -10,11 +10,9 @@ tuple<string, string, string> StudentsController::getResponse(const map<string, 
     nlohmann::json jsonData = service.getStudentsJson(queryParams);
     // cout << jsonData.dump(4) << endl;
 
-    map<string, string> placeholders = {
-        {"{{AGEFROM}}", jsonData["range"]["agefrom"].get<string>()},
-        {"{{AGETO}}", jsonData["range"]["ageto"].get<string>()},
-        {"{{STUDENTS}}", jsonData["scores"].dump()}
-    };
+    map<string, string> placeholders = {{"{{AGEFROM}}", jsonData["range"]["agefrom"].get<string>()},
+                                        {"{{AGETO}}", jsonData["range"]["ageto"].get<string>()},
+                                        {"{{STUDENTS}}", jsonData["scores"].dump()}};
     return make_tuple("200 OK", renderHTML(templatePath, placeholders), "text/html");
 }
 string StudentsController::getHtmlRange(const nlohmann::json &jsonData)

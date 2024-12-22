@@ -30,7 +30,7 @@ void MyRouter::setupRouting()
 
     addRouting("GET", "/refresh", [this](const smatch &, const map<string, string> &) -> tuple<string, string, string> {
         system("./gen");
-        return { "200 OK,", "Refresh Done", "text/plain" };
+        return {"200 OK,", "Refresh Done", "text/plain"};
     });
 
     //  首页

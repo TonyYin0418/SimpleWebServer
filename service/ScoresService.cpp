@@ -11,10 +11,7 @@ nlohmann::json ScoresService::getScoresJson_All()
     nlohmann::json j;
     for (const auto &score : scores) {
         string stu_link = "<a href='/students/" + score.stu_id + "'>" + score.stu_id + "</a>";
-        j.push_back({
-            {"stu_id", score.stu_id}, 
-            {"course_id", score.course_id}, 
-            {"score", score.score}});
+        j.push_back({{"stu_id", score.stu_id}, {"course_id", score.course_id}, {"score", score.score}});
     }
     return j;
 }

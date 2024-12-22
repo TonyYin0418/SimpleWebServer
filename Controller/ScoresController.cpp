@@ -12,20 +12,14 @@ tuple<string, string, string> ScoresController::getResponse_All()
 tuple<string, string, string> ScoresController::getResponse_byStu(string stuID)
 {
     nlohmann::json jsonData = service.getScoresJson_byStu(stuID);
-    map<string, string> placeholders = {
-        {"{{STU_ID}}", stuID},
-        {"{{SCORES}}", jsonData.dump()}
-    };
+    map<string, string> placeholders = {{"{{STU_ID}}", stuID}, {"{{SCORES}}", jsonData.dump()}};
     return make_tuple("200 OK", renderHTML("view/student_page.html", placeholders), "text/html");
 }
 
 tuple<string, string, string> ScoresController::getResponse_byCourse(string courseID)
 {
     nlohmann::json jsonData = service.getScoresJson_byCourse(courseID);
-    map<string, string> placeholders = {
-        {"{{COURSE_ID}}", courseID},
-        {"{{SCORES}}", jsonData.dump()}
-    };
+    map<string, string> placeholders = {{"{{COURSE_ID}}", courseID}, {"{{SCORES}}", jsonData.dump()}};
     return make_tuple("200 OK", renderHTML("view/course_page.html", placeholders), "text/html");
 }
 
