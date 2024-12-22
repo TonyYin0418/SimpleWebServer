@@ -31,6 +31,7 @@ void httpServer::run()
 
     if (::bind(serverSocket, (sockaddr *)&addr, sizeof(sockaddr_in)) == -1)
     {  //::bind是因为，我引入了std库，会与之冲突，导致随机编译错误。！！！！
+
         cerr << "Failed to bind port number" << endl;
         close(serverSocket);
         return;

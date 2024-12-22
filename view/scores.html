@@ -1,24 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses List</title>
-    <link rel="stylesheet" href="/public/styles.css">
+    <!-- Import style -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
+    <link rel="stylesheet" href="/public/styles.css" />
+    <!-- Import Vue 3 -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- Import component library -->
+    <script src="https://unpkg.com/element-plus"></script>
+
 </head>
+
 <body>
-    <h1>Scores</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Student Id</th>
-                <th>Course Id</th>
-                <th>Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{SCORES}}
-        </tbody>
-    </table>
+    <div id="app">
+        <el-container>
+            <el-header class="main-header">
+                Edu Portal
+            </el-header>
+            <el-main>
+                <el-page-header @back="goBack">
+                    <template #content>
+                        <span class="header-title">Scores List</span>
+                    </template>
+                </el-page-header>
+                <div class="gen-button">
+                    <el-button type="primary" @click="refreshData">Generate Data Randomly</el-button>
+                    <el-button type="success" @click="exportData">Export Data to csv</el-button>
+                </div>
+                <el-table :data="paginatedData" :default-sort="{ prop: 'id', order: 'ascending' }" stripe
+                    style="width: 100%">
+                    <el-table-column prop="stu_id" label="Student Id" width="180" align="center">
+                        <template #default="scope">
+                            <a :href="'/students/' + scope.row.stu_id">{{ scope.row.stu_id }}</a>
+                        </template>
+                    </el-table-column>
+                    <el-table-column prop="course_id" label="Course Id" width="180" align="center"></el-table-column>
+                    <el-table-column prop="score" label="Score" align="center"></el-table-column>
+                </el-table>
+            </el-main>
+            <el-footer> 
+                <el-pagination class="pagination" @current-change="handlePageChange" :current-page="currentPage" :page-size="pageSize"
+                    layout="total, prev, pager, next" :total="tableData.length">
+                </el-pagination>
+            </el-footer>
+        </el-container>
+    </div>
+    <div class="footer">
+        <p>
+            Created by
+            <a href="https://www.tonyyin.top" target="_blank"> <strong> Yin Yuwendong</strong> </a>
+        </p>
+        <span>
+            <svg height="24" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32" data-view-component="true">
+                <path
+                    d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z">
+                </path>
+            </svg>   
+            <a href="https://github.com/TonyYin0418/SimpleWebServer" target="_blank"> | TonyYin0418 | <strong>SimpleWebServer</strong> </a>
+        </span>
+        <p>Powered by <a href="https://github.com/element-plus/element-plus" target="_blank"> Element Plus</p>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    tableData: {{SCORES}},
+                    currentPage: 1,
+                    pageSize: 10
+                };
+            },
+            methods: {
+                goBack() {
+                    window.location.href = '/';
+                },
+                handlePageChange(val) {
+                    this.currentPage = val;
+                },
+                refreshData() {
+                    fetch('/refresh')
+                        .then(response => {
+                            if (response.ok) {
+                                this.$message({
+                                    message: 'Success, page will refresh in 2 seconds',
+                                    type: 'success'
+                                });
+                                setTimeout(() => {
+                                    location.reload();
+                                }, 1000); // 延迟一秒刷新页面
+                            } else {
+                                throw new Error('Network response was not ok.');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('There was a problem with the fetch operation:', error);
+                            this.$message({
+                                message: 'Failed to refresh data',
+                                type: 'error'
+                            });
+                        });
+                },
+                exportData() {
+                    const csvContent = "data:text/csv;charset=utf-8," + this.tableData.map(e => Object.values(e).join(",")).join("\n");
+                    const encodedUri = encodeURI(csvContent);
+                    const link = document.createElement("a");
+                    link.setAttribute("href", encodedUri);
+                    link.setAttribute("download", "courses_data.csv");
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    this.$message({
+                        message: 'Export Successful',
+                        type: 'success'
+                    });
+
+                }
+            },
+            computed: {
+                paginatedData() {
+                    const start = (this.currentPage - 1) * this.pageSize;
+                    const end = this.currentPage * this.pageSize;
+                    return this.tableData.slice(start, end);
+                }
+            }
+        };
+        const app = Vue.createApp(App);
+        app.use(ElementPlus);
+        app.mount("#app");
+    </script>
 </body>
+
 </html>

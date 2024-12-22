@@ -1,31 +1,112 @@
+header-row-style {
+    font-size: 30;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-}
-
-table {
-    width: 80%;
+#app {
+    max-width: 1200px;
     margin: 20px auto;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* 内边距 */
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    /* 圆角 */
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gen-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-header {
+    /* background-color: #409EFF; */
+    color: #303133;
+    padding: 10px 20px;
+    font-size: 28px;
     text-align: center;
+    font-size: 34px;
+    font-weight: bold;
 }
 
-th {
-    background-color: #f4f4f4;
+.el-table th {
+    color: #303133;
+    font-weight: bold;
+    font-size: 16px;
+    /* 设置字体大小 */
+}
+
+.el-table td a {
+    color: #606266;
+}
+
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #497ec8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer svg {
+    fill: white;
+    margin-right: 3px;
+}
+
+.footer span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item {
+    background-color: #5c9efa;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.grid-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.grid-item:hover {
+    background-color: #89bbfb;
 }

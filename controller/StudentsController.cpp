@@ -11,8 +11,9 @@ tuple<string, string, string> StudentsController::getResponse(const map<string, 
     // cout << jsonData.dump(4) << endl;
 
     map<string, string> placeholders = {
-        {"{{RANGE}}", getHtmlRange(jsonData["range"])},
-        {"{{STUDENTS}}", getHtmlRows(jsonData["scores"])},
+        {"{{AGEFROM}}", jsonData["range"]["agefrom"].get<string>()},
+        {"{{AGETO}}", jsonData["range"]["ageto"].get<string>()},
+        {"{{STUDENTS}}", jsonData["scores"].dump()}
     };
     return make_tuple("200 OK", renderHTML(templatePath, placeholders), "text/html");
 }

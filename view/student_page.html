@@ -23,28 +23,16 @@
             <el-main>
                 <el-page-header @back="goBack">
                     <template #content>
-                        <span class="header-title">Students List</span>
+                        <span class="header-title">Scores For Student: {{STU_ID}}</span>
                     </template>
                 </el-page-header>
                 <div class="gen-button">
-                    <el-button type="primary" @click="refreshData">Generate Data Randomly</el-button>
                     <el-button type="success" @click="exportData">Export Data to csv</el-button>
-                </div>
-                <div class="gen-button">
-                    <el-input v-model="agefrom" placeholder="Age From" style="width: 150px; margin-right: 10px;"></el-input>
-                    <el-input v-model="ageto" placeholder="Age To" style="width: 150px; margin-right: 10px;"></el-input>
-                    <el-button type="primary" @click="filterByAge">Filter</el-button>
                 </div>
                 <el-table :data="paginatedData" :default-sort="{ prop: 'id', order: 'ascending' }" stripe
                     style="width: 100%">
-                    <el-table-column prop="id" label="Student Id" width="180" align="center">
-                        <template #default="scope">
-                            <a :href="'/students/' + scope.row.id">{{ scope.row.id }}</a>
-                        </template>
-                    </el-table-column>
-                    <el-table-column prop="name" label="Name" width="280" align="center"></el-table-column>
-                    <el-table-column prop="age" label="Age" width="180" align="center"></el-table-column>
-                    <el-table-column prop="sex" label="Sex" align="center"></el-table-column>
+                    <el-table-column prop="course_id" label="Course Id" width="180" align="center"></el-table-column>
+                    <el-table-column prop="score" label="Score" align="center"></el-table-column>
                 </el-table>
             </el-main>
             <el-footer> 
@@ -73,11 +61,9 @@
         const App = {
             data() {
                 return {
-                    tableData: {{STUDENTS}},
+                    tableData: {{SCORES}},
                     currentPage: 1,
-                    pageSize: 10,
-                    agefrom: '{{AGEFROM}}',
-                    ageto: '{{AGETO}}'
+                    pageSize: 10
                 };
             },
             methods: {
@@ -87,35 +73,12 @@
                 handlePageChange(val) {
                     this.currentPage = val;
                 },
-                refreshData() {
-                    fetch('/refresh')
-                        .then(response => {
-                            if (response.ok) {
-                                this.$message({
-                                    message: 'Success, page will refresh in 2 seconds',
-                                    type: 'success'
-                                });
-                                setTimeout(() => {
-                                    location.reload();
-                                }, 1000); // 延迟一秒刷新页面
-                            } else {
-                                throw new Error('Network response was not ok.');
-                            }
-                        })
-                        .catch(error => {
-                            console.error('There was a problem with the fetch operation:', error);
-                            this.$message({
-                                message: 'Failed to refresh data',
-                                type: 'error'
-                            });
-                        });
-                },
                 exportData() {
                     const csvContent = "data:text/csv;charset=utf-8," + this.tableData.map(e => Object.values(e).join(",")).join("\n");
                     const encodedUri = encodeURI(csvContent);
                     const link = document.createElement("a");
                     link.setAttribute("href", encodedUri);
-                    link.setAttribute("download", "students_data.csv");
+                    link.setAttribute("download", "student_data.csv");
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
@@ -123,19 +86,6 @@
                         message: 'Export Successful',
                         type: 'success'
                     });
-                },
-                filterByAge() {
-                    const agefrom = this.agefrom;
-                    const ageto = this.ageto;
-                    if (agefrom && ageto && !isNaN(agefrom) && !isNaN(ageto)) {
-                        window.location.href = `/students?agefrom=${agefrom}&ageto=${ageto}`;
-                    } else {
-                        this.$message({
-                            message: 'Please enter both age from and age to',
-                            type: 'warning'
-                        });
-                        return;
-                    }
                 }
             },
             computed: {

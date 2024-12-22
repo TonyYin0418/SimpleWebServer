@@ -18,9 +18,10 @@ nlohmann::json StudentsService::getStudentsJson(const map<string, string> &query
         // at方法适用于const类型，因为operator[]方法可能会插入新元素，访问功能和at一样
     }
     j["range"] = {
-        {"agefrom", agefrom},
-        {"ageto", ageto},
+        {"agefrom", to_string(agefrom)},
+        {"ageto", to_string(ageto)},
     };
+    j["scores"] = nlohmann::json::array();
     for (const auto &student : students) {
         if (agefrom <= student.age && student.age <= ageto) {
             j["scores"].push_back({{"id", to_string(student.id)},

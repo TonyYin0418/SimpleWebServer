@@ -49,11 +49,11 @@ void MyRouter::setupRouting()
     });
 
     // 成绩的动态路由
-    addRouting("GET", "/scorebystudent/:stuID",
+    addRouting("GET", "/students/:stuID",
                [this](const smatch &match, const map<string, string> &) -> tuple<string, string, string> {
                    return scores_controller.getResponse_byStu(match[1].str());
                });
-    addRouting("GET", "/scorebycourse/:courseID",
+    addRouting("GET", "/courses/:courseID",
                [this](const smatch &match, const map<string, string> &) -> tuple<string, string, string> {
                    return scores_controller.getResponse_byCourse(match[1].str());
                });

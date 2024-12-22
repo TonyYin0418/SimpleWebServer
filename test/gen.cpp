@@ -13,7 +13,7 @@ void genblock(){
 	}
 }
 void genname(){
-	int s=rand()%3+2;
+	int s=rand()%2+2;
 	while(s--){
 		genblock();
 		if(s)putchar(' ');
@@ -22,8 +22,8 @@ void genname(){
 int main(){
 	b[0]=b['e'-'a']=b['i'-'a']=b['o'-'a']=b['u'-'a']=1;
 	srand(time(0));
-	int n=rand()%9900+100;
-	int m=rand()%990+10;
+	int n=rand()%99+100;
+	int m=rand()%9+10;
 	freopen("public/students.csv","w",stdout);
 	puts("id,name,age,sex");
 	for(int i=1;i<=n;++i){
@@ -38,16 +38,17 @@ int main(){
 		printf("%d,",1000+i);
 		printf("%s ",A[rand()%10]);
 		genblock();
-		printf(",%s %02d:%02d,%d-%03d,",s[rand()%7],rand()%24,rand()%60,rand()%9+1,rand()%900+100);
-		genname();
+        printf(",%s %02d:%02d,",s[rand()%7],rand()%24,rand()%60);
+        genname();
+        printf(",%d-%03d",rand()%9+1,rand()%900+100);
 		puts("");
 	}
 	fclose(stdout);
 	freopen("public/scores.csv","w",stdout);
 	puts("stu_id,course_id,score");
 	for(int i=0;i<n;++i)
-	for(int j=0;j<m;++j)if(rand()%1000<10)
-		printf("%d,%d,%d\n",10000+i,1000+j,rand()%100+1);
+	for(int j=0;j<m;++j)if(rand()%1000<600)
+		printf("%d,%d,%d\n",10000+i,1000+j,rand()%201-100);
 	fclose(stdout);
 	return 0;
 }
