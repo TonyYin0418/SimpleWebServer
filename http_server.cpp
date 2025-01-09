@@ -138,7 +138,7 @@ string httpServer::getContentType(const string &filePath)  // 给静态资源文
 }
 
 map<string, string> httpServer::parseQueryParams(const string &path)
-{   // 解析query parameters，未来可用正则表达式改写
+{  // 解析query parameters，未来可用正则表达式改写
     // 在server中解析query参数（并不影响路由转发），在router中解析path参数（是地址的一部分）
     map<string, string> queryParams;
     size_t pos = path.find('?');

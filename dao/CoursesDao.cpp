@@ -18,7 +18,7 @@ std::vector<CoursesDao::Course> CoursesDao::parseCSV(const std::string &filePath
     // if (getcwd(cwd, sizeof(cwd)) != nullptr) {
     //     std::cout << "Current working dir: " << cwd << std::endl;
     // }
-    
+
     if (file.is_open()) {
         // 跳过第一行（标题行）
         std::getline(file, line);
