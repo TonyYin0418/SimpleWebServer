@@ -13,10 +13,12 @@ std::vector<CoursesDao::Course> CoursesDao::parseCSV(const std::string &filePath
     std::vector<Course> courses;
     std::ifstream file(filePath);
     std::string line;
-    char cwd[1024];
-    if (getcwd(cwd, sizeof(cwd)) != nullptr) {
-        std::cout << "Current working dir: " << cwd << std::endl;
-    }
+
+    // char cwd[1024];
+    // if (getcwd(cwd, sizeof(cwd)) != nullptr) {
+    //     std::cout << "Current working dir: " << cwd << std::endl;
+    // }
+    
     if (file.is_open()) {
         // 跳过第一行（标题行）
         std::getline(file, line);

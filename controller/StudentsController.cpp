@@ -8,13 +8,14 @@ const string templatePath = "view/students.html";
 tuple<string, string, string> StudentsController::getResponse(const map<string, string> &queryParams)
 {
     nlohmann::json jsonData = service.getStudentsJson(queryParams);
-    // cout << jsonData.dump(4) << endl;
-
     map<string, string> placeholders = {{"{{AGEFROM}}", jsonData["range"]["agefrom"].get<string>()},
                                         {"{{AGETO}}", jsonData["range"]["ageto"].get<string>()},
                                         {"{{STUDENTS}}", jsonData["scores"].dump()}};
     return make_tuple("200 OK", renderHTML(templatePath, placeholders), "text/html");
 }
+
+/*
+//弃用
 string StudentsController::getHtmlRange(const nlohmann::json &jsonData)
 {
     string range = "All";
@@ -36,3 +37,5 @@ string StudentsController::getHtmlRows(const nlohmann::json &jsonData)
     }
     return rows;
 }
+
+*/

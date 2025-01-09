@@ -14,7 +14,6 @@ class CoursesController : public Controller
    public:
     CoursesController(CoursesService &service);
     tuple<string, string, string> getResponse();
-    string getHtmlRows(const nlohmann::json &jsonData);
 
    private:
     CoursesService &service;

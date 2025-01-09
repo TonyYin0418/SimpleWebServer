@@ -25,7 +25,7 @@ void httpServer::run()
 
     sockaddr_in addr = {};
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(port);                    // Port number  host to net short
+    addr.sin_port = htons(port);                    // Port number host to net short
     addr.sin_addr.s_addr = inet_addr("127.0.0.1");  // Localhost address
     // to check port:     lsof -i :9870
 
@@ -88,13 +88,11 @@ void httpServer::handleClient(int clientSocket)
         string filePath = path;
         filePath.erase(0, 1);
         ifstream file(filePath);
-        cout << filePath << endl;
         if (file.is_open()) {
             string content((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
             sendResponse(clientSocket, "200 OK", content, getContentType(filePath));
         }
         else {
-            cout << "!!!!!\n";
             sendResponse(clientSocket, "404 Not Found", "File not found");
         }
         file.close();
@@ -140,7 +138,7 @@ string httpServer::getContentType(const string &filePath)  // 给静态资源文
 }
 
 map<string, string> httpServer::parseQueryParams(const string &path)
-{  // 解析query parameters，未来可用正则表达式改写
+{   // 解析query parameters，未来可用正则表达式改写
     // 在server中解析query参数（并不影响路由转发），在router中解析path参数（是地址的一部分）
     map<string, string> queryParams;
     size_t pos = path.find('?');
@@ -158,9 +156,6 @@ map<string, string> httpServer::parseQueryParams(const string &path)
             queryParams[key] = value;
             start = end + 1;
         }
-    }
-    for (auto p : queryParams) {
-        cout << p.first << " : " << p.second << endl;
     }
     return queryParams;
 }

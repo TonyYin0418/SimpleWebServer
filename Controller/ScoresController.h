@@ -18,7 +18,6 @@ class ScoresController : public Controller
     tuple<string, string, string> getResponse_byCourse(string courseID);
 
    private:
-    string getHtmlRows(const nlohmann::json &jsonData);
     ScoresService &service;
 };
 

@@ -28,7 +28,6 @@ tuple<string, string, string> Router::handle(
     }
     // 动
     if (dynamicRouteTable.count(method)) {
-        cout << "正在动态解析！！！！！！！！！！！！";
         for (auto& item : dynamicRouteTable[method]) {
             // item.first -> 带路径前缀的匹配模式，item.second -> handler
             smatch match;

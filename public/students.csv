@@ -1,190 +1,124 @@
 id,name,age,sex
-10001,Noleq Mayi,17,N
-10002,Dasato Pelega Cufe,16,W
-10003,Wogavi Zasede Petib,20,J
-10004,Meqati Ruweg Sabu,39,R
-10005,Mayed Zunafo Vadac,17,C
-10006,Cofena Vowu Porid,32,K
-10007,Koxe Faxov,13,N
-10008,Balek Siveh Fopoqo,24,Z
-10009,Kovitu Hexi Yikuy,15,Y
-10010,Wafac Peser Dunuy,11,K
-10011,Fera Mule,20,F
-10012,Cefani Zokid,26,D
-10013,Kubuz Yubol,32,C
-10014,Vafub Loxav Ricavo,39,P
-10015,Xeza Ceyuj Sizu,13,O
-10016,Niwe Vubo,18,W
-10017,Qemew Vahezi Sebupa,19,Y
-10018,Toxoz Kehaf Rozi,19,A
-10019,Pasag Bocuri,24,L
-10020,Gebip Jiso Homov,21,O
-10021,Jifel Yahono Pumu,17,V
-10022,Qahawi Xiko Rekatu,23,G
-10023,Vipope Sibo Xedahe,35,R
-10024,Yoyiy Buquk Peli,21,J
-10025,Fupaki Rumizo Quxibo,14,V
-10026,Viki Nute,13,V
-10027,Deli Dozig,13,H
-10028,Zesuz Qamase Voyib,22,V
-10029,Hivut Puqure Femuj,34,A
-10030,Yupuli Hufiy,19,M
-10031,Sabuq Latu Dofimo,24,Y
-10032,Buheli Loliju,26,N
-10033,Heyif Taqiku,31,V
-10034,Loji Rito Qeje,25,X
-10035,Pefopi Wayuru,23,A
-10036,Kuju Yukes,27,U
-10037,Qecu Civefu,26,D
-10038,Xihizi Rujug Mapevu,20,K
-10039,Dalo Zanu,23,K
-10040,Xurura Puyuxu,12,J
-10041,Wefas Bevuwa Diyi,34,W
-10042,Yofeqa Wupigi,34,G
-10043,Konimi Fibi Yuran,19,D
-10044,Wuhug Caga,21,R
-10045,Hobuto Fano,28,F
-10046,Qomu Ceced,37,Y
-10047,Lida Kedoq,30,D
-10048,Betoho Qumo,39,J
-10049,Nokiya Jaxo,18,N
-10050,Gugom Bulaf Pojov,20,U
-10051,Nebupo Pefisi Legut,29,K
-10052,Zodoka Woyiqi Taki,26,W
-10053,Herec Xewuve Zepi,31,Y
-10054,Kanida Nigige,18,K
-10055,Qima Jemub,12,Q
-10056,Yizu Maduv,31,E
-10057,Sacuh Qemi,34,W
-10058,Zukozu Vuwi Mahi,30,N
-10059,Rokuno Cixow,14,J
-10060,Recozo Visisu,15,G
-10061,Payay Yavero Koqonu,10,N
-10062,Gequpa Xawud,34,O
-10063,Hekoj Duki Virat,37,U
-10064,Wunece Piqoro Gene,12,Y
-10065,Pamaj Yeba Rayina,10,J
-10066,Mucuyi Deko,29,U
-10067,Tigu Woqeya Cocudo,11,B
-10068,Rivem Fidafu Tatoxa,10,F
-10069,Nejo Yezesi Wogos,14,X
-10070,Qazi Yimiti Macuj,24,G
-10071,Jifoto Gukadi Samuce,33,S
-10072,Keyobu Livay,36,R
-10073,Dakeru Xuqayo,28,O
-10074,Domuf Wemip Gopuda,10,C
-10075,Xoju Metu Huxuh,27,A
-10076,Merac Fuhi,21,T
-10077,Biwi Cike Zico,16,O
-10078,Paweq Fefas,27,N
-10079,Dako Bikaf,27,H
-10080,Zusam Vira,33,Q
-10081,Huxuy Kasak,11,B
-10082,Lome Zoqa,34,G
-10083,Gequhu Kimul Zoto,21,X
-10084,Fiweji Feru,10,S
-10085,Tugah Runevo Bikoce,11,Y
-10086,Qoyaqo Kigud,28,M
-10087,Butiha Kesu,20,L
-10088,Nizezo Beco Vojic,11,I
-10089,Yede Bokuze,28,A
-10090,Xiza Cuwar,30,Z
-10091,Zobut Sezut Naxaz,18,S
-10092,Ruxix Yuvi Qafevi,25,D
-10093,Rume Genojo Wici,13,M
-10094,Piko Norigo,17,Y
-10095,Gujur Sove Qomafo,11,M
-10096,Fife Maxi Sipa,16,I
-10097,Niqul Guhuka,28,W
-10098,Gilez Cafeq,13,B
-10099,Pajufo Mexixa,17,F
-10100,Pujaf Suqa,24,Q
-10101,Dalasa Vihudu,23,P
-10102,Yopa Poduko,21,X
-10103,Jomume Xanev,24,Y
-10104,Witile Yuvefu,23,F
-10105,Jizit Qivec Xapaku,16,R
-10106,Meqe Guzo,29,A
-10107,Xati Zizoy Batoj,14,F
-10108,Qitod Jujar Rizah,29,P
-10109,Kahir Saja Xecuh,14,F
-10110,Siju Hece Locile,15,Y
-10111,Zuvol Yaxegu Zanici,29,N
-10112,Minu Xuso Toke,20,V
-10113,Hexi Guroy Fajoj,37,U
-10114,Doxope Sawof Tohi,36,G
-10115,Xocu Jolu Zimil,13,R
-10116,Yebu Gibeg,28,N
-10117,Nuceyu Leja,31,O
-10118,Zeyame Zejod,19,O
-10119,Jejoy Durite,16,G
-10120,Noboxo Hewev Yara,39,S
-10121,Fubuna Love Bota,36,G
-10122,Ratoqu Rayi Tarewi,24,B
-10123,Periba Tasip,29,R
-10124,Tebovu Fepu Mexiji,26,O
-10125,Muxez Tajog,12,K
-10126,Hofo Ranu,14,P
-10127,Medopo Ruro Jofi,26,E
-10128,Siye Qopibo,35,I
-10129,Dajuk Yisoki,37,L
-10130,Dako Padike Vutam,32,O
-10131,Yazov Rotic,14,O
-10132,Weye Conetu Lacipo,32,B
-10133,Hexusu Suwud,20,S
-10134,Lahe Qere Vasi,32,K
-10135,Waxu Nejim Gutal,22,X
-10136,Pija Nebebu,32,D
-10137,Fuqoju Cizup Sabagi,28,H
-10138,Fere Lusixo,19,X
-10139,Hepo Nosed Duruju,39,G
-10140,Gija Kosi,33,Z
-10141,Pegil Gigem Xememo,22,Q
-10142,Riboz Tazere,29,G
-10143,Rozag Hikuti,21,G
-10144,Rowafe Nase Hexoti,12,A
-10145,Nedu Yubu,14,C
-10146,Teyix Nukur Sigu,34,I
-10147,Gofa Kimi,26,W
-10148,Xakoda Wonu Revuqi,30,A
-10149,Hewe Hoxek Maqic,34,Q
-10150,Qesaf Cumiyo,13,W
-10151,Darugu Cuza,30,G
-10152,Jola Hucoli Pelam,23,S
-10153,Mudaju Sevaga Dupaw,25,M
-10154,Pawur Nesu,37,E
-10155,Lilesa Xike Woyam,39,Q
-10156,Diruri Zafoge Rihijo,26,C
-10157,Qeje Mijiv,31,H
-10158,Fafa Xizel Fuxajo,13,Z
-10159,Dahu Zeku,16,I
-10160,Giji Nefa Wixi,36,B
-10161,Wetu Sagani Kiteq,25,Y
-10162,Pafe Loxupe,30,U
-10163,Yokire Seyi Kufez,38,O
-10164,Jigoc Havif Raka,39,V
-10165,Sacaz Hijeso,12,B
-10166,Yubo Sifag Fivazi,39,G
-10167,Teru Xofew Dakil,33,D
-10168,Popa Moloma Zuwo,30,S
-10169,Qutos Zesew Dicik,10,W
-10170,Qewod Comu,18,O
-10171,Vuyo Busowu Lecuc,31,D
-10172,Jumok Yibite Yugi,19,X
-10173,Vexiqi Lubu Niyur,23,T
-10174,Xikor Nizero,26,C
-10175,Piwixa Gipig Xodep,26,F
-10176,Ruta Cuqowi,35,C
-10177,Mate Gamid,17,J
-10178,Wamoz Quner,11,G
-10179,Yoya Foja,34,O
-10180,Kozuw Kaqex,21,Q
-10181,Berox Yira,36,U
-10182,Gatet Rotaci Waduh,18,K
-10183,Sijoga Hetacu Terisi,10,L
-10184,Yonif Kopus Tabu,32,O
-10185,Piquyi Huva,32,K
-10186,Suro Quwi Vuro,31,S
-10187,Bera Vodod Lujo,14,N
-10188,Denex Dumum,31,X
-10189,Hegoba Wixo Nizev,11,Z
+10001,Yixev Zidep,21,V
+10002,Damato Jeqax,25,V
+10003,Fuluq Hoqosu Roye,17,B
+10004,Hojun Yive,31,Q
+10005,Giyuto Mulur Xoxab,26,K
+10006,Jotoj Kanu,15,S
+10007,Mepite Kuyi,11,K
+10008,Beqes Miru Weyape,28,P
+10009,Qayo Zataj,39,C
+10010,Posoja Natuzu Yulo,17,R
+10011,Qokeqo Lofa Laboxe,36,Z
+10012,Hetu Nutim,13,U
+10013,Hilohi Lojipu,27,X
+10014,Mafo Xowoy Jafoy,37,U
+10015,Hayuk Hola Pabi,17,H
+10016,Doti Vami,15,L
+10017,Fahace Tadaxu,14,E
+10018,Nufoko Viqafu Yinul,19,B
+10019,Ficude Kexewo,27,A
+10020,Sifo Ziyuy,33,C
+10021,Vetupi Zetoru Yixewu,17,O
+10022,Huce Lojoba,29,I
+10023,Senu Vefaco Fuqacu,31,I
+10024,Pala Vulami,37,F
+10025,Seba Hebe Vazax,36,J
+10026,Rekofa Qanuyi,22,M
+10027,Poqum Riyoda,19,Y
+10028,Zowedu Qeyaju,24,R
+10029,Yedin Xudo Gopo,35,E
+10030,Nofa Lefeki Paqiz,34,M
+10031,Xeyud Tazur Vaweq,26,I
+10032,Bemi Lijoqe Bebodu,38,O
+10033,Vudime Ceju Sazu,38,X
+10034,Raven Toros,11,Y
+10035,Boxor Dubik Nezif,39,X
+10036,Zihay Tahoc Vizap,27,U
+10037,Yaqan Rebuda,20,P
+10038,Tapam Suzi,21,O
+10039,Busa Xisime Yogot,37,X
+10040,Nuti Dabe,20,A
+10041,Xusami Qeri Moloco,19,L
+10042,Mative Pihuvi Kehiqa,10,D
+10043,Laqa Qudok,37,H
+10044,Cokuj Jemek Boge,16,V
+10045,Bazip Guten,21,W
+10046,Xogoze Fedaki Hedoje,18,H
+10047,Kofip Beveh,16,N
+10048,Muma Baneh Teyamo,16,A
+10049,Lote Fuxa,20,H
+10050,Taza Ziweso Doke,17,T
+10051,Sedef Suwo,23,U
+10052,Panada Boqeji,25,E
+10053,Jina Vivat Hugin,20,K
+10054,Mezegi Baneji Jacozo,24,E
+10055,Ruceve Botoh Petara,36,P
+10056,Zazi Lizaqa,11,E
+10057,Huxiw Qudig,11,A
+10058,Kuketi Wisuj Wozo,13,X
+10059,Pefopo Vuwoxe Laday,33,P
+10060,Civari Vafu Tuku,18,D
+10061,Wicita Pafuca Fadu,37,W
+10062,Jete Tudi,22,W
+10063,Vaguk Papuli,27,D
+10064,Zewuha Jemum Dayuv,10,D
+10065,Wexow Kayag,14,H
+10066,Qaqaqe Xiyuwu Mubos,32,Y
+10067,Pigo Guropi Witit,24,N
+10068,Vuto Dukor Yaqad,31,U
+10069,Gesa Cewu,23,B
+10070,Kixer Hivova,34,R
+10071,Hife Loqewo Hodac,35,L
+10072,Vite Rasot,11,C
+10073,Nixus Lewale Denep,19,X
+10074,Jevewu Zuka Jireki,39,H
+10075,Fopi Xasuju Tisut,35,T
+10076,Tage Zaniw,24,H
+10077,Jawe Jerun Weda,38,V
+10078,Vozo Rewu Hojo,35,K
+10079,Kifuf Qacuje,26,V
+10080,Dope Gelim,24,A
+10081,Duga Jojuc,25,Y
+10082,Bureji Bapuga,18,W
+10083,Yore Pegake Toxefa,23,N
+10084,Takil Giken,36,Z
+10085,Qacuru Pane Jewep,15,J
+10086,Noca Xaxog,31,E
+10087,Cisif Kevel,12,J
+10088,Lekel Helatu Wobura,25,T
+10089,Hehey Lajeta Dobuqo,34,A
+10090,Sudol Wiqi Kuvol,20,A
+10091,Vuti Gudig Xisab,21,B
+10092,Lotolo Toxu,23,L
+10093,Zokavo Moli Boya,39,Z
+10094,Maxicu Cizok Lisawe,38,Y
+10095,Lahe Naqot,31,L
+10096,Rudur Zuta Micep,34,Y
+10097,Puyoma Qazud,19,N
+10098,Jayoqi Kupoha,14,K
+10099,Kawevu Tunuvo Yeca,28,E
+10100,Gitaxo Zipu Wogu,30,A
+10101,Yuxina Nosoy Kifoyo,23,F
+10102,Xowow Zices,23,D
+10103,Paju Duqoq Saxola,32,A
+10104,Xorih Newuz,33,J
+10105,Fodeno Yuyus Nowiju,34,H
+10106,Miwa Ruzu Cidic,22,T
+10107,Zuviq Daci,25,O
+10108,Fixe Sela,28,C
+10109,Bitam Nofuh,10,N
+10110,Qigiyi Mifi Mire,22,S
+10111,Rejayi Pazima,21,Y
+10112,Pazu Kiqec,37,L
+10113,Ganahi Haqa,17,C
+10114,Woho Lojod,18,W
+10115,Tuve Legan Raned,14,G
+10116,Jiza Zeha Xiviw,33,P
+10117,Vobuq Zusu,11,P
+10118,Lasali Ciqu,14,M
+10119,Pojip Cerime,12,L
+10120,Rese Peviki,10,V
+10121,Baxiq Siqa Zewo,25,K
+10122,Ridow Seqiw Cebi,25,A
+10123,Zinabo Butuj,36,N

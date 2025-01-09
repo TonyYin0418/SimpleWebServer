@@ -22,7 +22,8 @@ tuple<string, string, string> ScoresController::getResponse_byCourse(string cour
     map<string, string> placeholders = {{"{{COURSE_ID}}", courseID}, {"{{SCORES}}", jsonData.dump()}};
     return make_tuple("200 OK", renderHTML("view/course_page.html", placeholders), "text/html");
 }
-
+/*
+// 弃用
 string ScoresController::getHtmlRows(const nlohmann::json &jsonData)
 {
     string rows = "";
@@ -32,3 +33,4 @@ string ScoresController::getHtmlRows(const nlohmann::json &jsonData)
     }
     return rows;
 }
+*/

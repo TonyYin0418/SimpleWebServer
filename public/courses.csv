@@ -1,190 +1,124 @@
 stu_id,course_id,score
-1001,C++ Kecuxo,Sat 13:15,Zujid Ciwus Jofasa,2-236
-1002,Structure Fejo,Fri 13:14,Sigu Yovalo,5-605
-1003,Calculus Roqube,Wed 16:21,Seyar Somej,3-632
-1004,Algebra Quvit,Wed 05:51,Cizoh Resi,7-574
-1005,Composition Jaguj,Wed 09:44,Jinix Jacoda,9-201
-1006,C++ Gixa,Wed 10:10,Pidoy Pupiw,9-985
-1007,Composition Carobe,Tue 01:37,Basawa Joxofa Wasuji,2-340
-1008,Analysis Xugud,Sat 11:37,Qawaca Cupij,7-975
-1009,English Lalu,Sat 18:58,Wufa Wicoj Nayoq,2-112
-1010,Drinking Puwovi,Sun 23:20,Feqaq Zubop,4-692
-1011,Composition Vaje,Thu 04:34,Ronid Hihu,5-249
-1012,Spirit Mima,Thu 12:45,Wiseko Puye,1-925
-1013,C++ Zaqu,Tue 14:13,Lixori Lubip Famac,7-373
-1014,Spirit Diyufi,Fri 01:59,Qamure Dohek,2-773
-1015,Drinking Logig,Tue 07:22,Kitiv Zoseg,4-801
-1016,Python Luva,Mon 08:39,Razox Civon Juvam,7-811
-1017,Python Zozad,Tue 03:08,Maye Qefuf Jupe,7-672
-1018,Composition Hasin,Sun 11:55,Yexali Fecu Lidix,4-348
-1019,Composition Muxepe,Sun 09:21,Yijaw Pivi Lipa,7-278
-1020,English Mamuxe,Tue 13:58,Gehuni Qiqic,4-147
-1021,C++ Pewi,Sat 19:44,Hilaxo Sedit,4-129
-1022,English Quqec,Tue 13:45,Zira Baja Homo,4-674
-1023,Composition Rogi,Tue 10:39,Ziwixo Balivu Hero,3-510
-1024,Drinking Nidow,Thu 02:51,Nahuli Poyuqa,1-746
-1025,Calculus Diya,Fri 00:03,Vukota Doru,5-963
-1026,Algebra Siqa,Fri 02:41,Biha Tuji,8-235
-1027,Structure Kelivu,Thu 03:10,Gufe Ricok,5-567
-1028,Algebra Yajep,Wed 18:05,Tije Zixeq Yugece,7-898
-1029,Drinking Goyuno,Sat 05:46,Yusa Yabiha,8-648
-1030,Python Huqu,Mon 17:51,Siji Poqis,1-995
-1031,Structure Neqela,Fri 09:27,Sehun Wuta Xuwow,9-319
-1032,Calculus Jojec,Wed 10:16,Himowa Kutawo Fime,8-663
-1033,Algebra Cohi,Mon 09:59,Luri Nolon,6-724
-1034,Analysis Wure,Tue 22:56,Jerim Pojiva Kolewi,7-578
-1035,Algebra Yiqax,Mon 07:56,Zetoju Cejasi,5-907
-1036,Algebra Yitute,Sun 01:56,Witepe Xizap Kovozu,4-110
-1037,Composition Kobere,Mon 19:06,Bake Niki,2-359
-1038,Python Reqoka,Thu 19:08,Refov Kofiq Tadob,7-792
-1039,Structure Weloqo,Mon 23:55,Hudu Cuviwa Lovi,3-330
-1040,Drinking Fobo,Wed 06:06,Wikih Xigegi Pefuju,2-558
-1041,Algebra Qekov,Sat 17:09,Fozugi Cuvey,6-632
-1042,Analysis Yiludo,Sun 08:03,Sileme Vojes,8-360
-1043,Analysis Xojevu,Fri 17:52,Tonefa Dakax,9-652
-1044,Drinking Zivon,Sat 13:53,Gava Dutuge,8-367
-1045,Algebra Cike,Fri 05:13,Yiyez Reloyi Qevejo,5-409
-1046,Analysis Someto,Mon 09:49,Suked Remeg Vequ,4-578
-1047,Drinking Hazo,Wed 09:05,Viwi Remot Hogod,1-314
-1048,English Takax,Wed 19:39,Hewe Jebuma Poku,6-551
-1049,Composition Xoyehe,Mon 15:52,Raqa Kotu,3-966
-1050,Composition Lijul,Sat 08:50,Tana Qaluni Wiheva,9-129
-1051,Structure Pucovo,Sat 21:14,Xogi Karaqu Wicoda,4-240
-1052,Analysis Qema,Tue 00:04,Tubo Volehu Zogo,9-785
-1053,Calculus Koru,Sun 10:36,Kavuke Kuxam Lefowi,5-506
-1054,Structure Siwub,Mon 15:31,Xoset Mesidi,8-437
-1055,Calculus Mevac,Fri 11:34,Gutihu Wejo,6-659
-1056,Spirit Qaju,Wed 23:41,Wilenu Jafup Sewo,2-484
-1057,Composition Bedi,Tue 18:41,Lawa Bejawa,4-324
-1058,C++ Cuka,Wed 20:22,Moluje Ceduza,9-960
-1059,Calculus Zatun,Tue 19:14,Yevut Honal Deniy,9-952
-1060,C++ Kaqor,Sat 14:54,Naxofi Henire Fiyob,2-365
-1061,Analysis Toqece,Sun 14:43,Cozub Teqe,7-419
-1062,Python Kunag,Mon 14:38,Gohawo Buwita Fedeh,4-365
-1063,Python Boneto,Thu 03:58,Wuvo Zusobo,4-577
-1064,Spirit Vuwa,Sun 19:45,Jayife Waje Qucoj,5-149
-1065,Algebra Joha,Sat 10:35,Gixezu Kafe,9-283
-1066,Structure Vibi,Thu 04:25,Yasidi Dibolo,7-166
-1067,Calculus Buse,Mon 21:18,Yazelu Zixi,4-136
-1068,Calculus Fumuse,Sat 22:06,Jevul Xeri,9-169
-1069,Algebra Qudino,Thu 22:37,Hohuj Delaja Quyila,8-545
-1070,English Potaqa,Sat 09:56,Qijus Monije,7-221
-1071,Calculus Zifuvi,Sat 10:53,Supuw Qodiwe Javi,7-118
-1072,Python Zebupo,Sat 17:59,Jepacu Werole,4-907
-1073,Structure Xokur,Wed 12:03,Giludi Yisimo Rufiv,5-139
-1074,C++ Rexoto,Sat 22:39,Yufoce Jija Pagini,6-819
-1075,Structure Yewoso,Mon 21:39,Guyafi Yawojo,1-797
-1076,C++ Danag,Sun 06:59,Dememu Kaxi,3-968
-1077,Algebra Vocuha,Thu 11:50,Semih Cogo,3-757
-1078,Calculus Fewec,Mon 00:18,Wutelo Terep,8-787
-1079,Python Vilosi,Fri 04:08,Doya Lidi,9-945
-1080,Analysis Dova,Sat 07:17,Nolisa Fuso,9-739
-1081,Composition Tojase,Mon 23:54,Zaza Saqub Dohe,9-646
-1082,Structure Funu,Sun 08:31,Neso Vawidi Zuyoku,4-563
-1083,Drinking Wuya,Thu 21:47,Xatiwi Gufir,1-323
-1084,C++ Pazeq,Sun 20:46,Luxaj Kitik,2-327
-1085,Spirit Cofozi,Wed 18:17,Gojad Yosi Naqaso,4-155
-1086,English Retu,Thu 08:32,Golaza Toqe,2-829
-1087,Spirit Janih,Mon 07:09,Gajagu Weyu,7-838
-1088,Python Zozo,Sat 14:28,Bobij Nipar Xofi,7-742
-1089,Spirit Toyi,Thu 05:27,Gufoho Hemeri Teha,8-914
-1090,English Xuca,Wed 17:41,Lahucu Yoneya,5-253
-1091,Analysis Mumiti,Sun 04:14,Yibi Yefu,5-204
-1092,Drinking Kuci,Thu 12:37,Wecak Xewejo,1-956
-1093,Spirit Jaji,Sun 15:52,Xayok Morape Xigif,2-304
-1094,C++ Vodib,Sun 20:41,Late Cika Qimeri,8-605
-1095,Composition Jonu,Fri 01:43,Teqivu Towak Hitev,9-217
-1096,Calculus Qijaf,Wed 05:55,Masifo Manel Hilima,6-332
-1097,Composition Qodo,Tue 19:43,Simuw Lekizo,1-145
-1098,C++ Xapu,Mon 10:22,Wejug Pifome,4-517
-1099,Structure Papawu,Wed 18:42,Tinelo Nipeqo,6-396
-1100,Calculus Reni,Fri 20:34,Zafosu Xupas Qeko,3-308
-1101,Drinking Tuveya,Sun 05:45,Tosuv Jada Jexoh,3-924
-1102,Structure Lejore,Wed 12:43,Jisuj Nekes Rizo,8-379
-1103,Calculus Love,Thu 22:53,Wokid Legog,8-908
-1104,Composition Fixu,Tue 11:51,Kigi Caqapu Bunajo,6-684
-1105,Algebra Kereci,Fri 16:55,Foji Sari Pugol,6-249
-1106,C++ Tuxer,Thu 09:02,Poguho Rafa,4-300
-1107,Spirit Vamok,Tue 10:57,Bodu Kolumu Futa,6-797
-1108,Spirit Rubazo,Wed 08:07,Gelaja Qipal Hopace,4-260
-1109,C++ Lava,Tue 22:39,Mebi Bosid,1-639
-1110,English Bozade,Mon 19:19,Voluti Zugay,9-904
-1111,Spirit Huri,Tue 21:08,Zixepi Moxi,1-711
-1112,Spirit Jadezi,Sat 01:03,Loweco Huqik Jopi,4-529
-1113,Calculus Yahab,Fri 04:12,Hivaz Siwil Deqoho,2-395
-1114,Drinking Rigoje,Tue 13:51,Woqeb Mupes Gasebe,4-384
-1115,Python Faqem,Sun 02:20,Loruri Zowi Jiquta,9-889
-1116,Drinking Derul,Sun 18:46,Qakoj Nodew,8-163
-1117,Python Tute,Sun 12:45,Wati Foluru Ziseba,9-424
-1118,Calculus Pipux,Mon 10:03,Bucej Noyiw Ricow,1-646
-1119,Analysis Qutize,Thu 06:38,Budahe Muzo,6-290
-1120,C++ Nocogo,Sat 11:39,Fuloj Pudo,1-282
-1121,Calculus Fugo,Mon 14:49,Jirim Wiyafo,3-219
-1122,Spirit Wufiha,Mon 21:33,Fatuhi Pofa,6-874
-1123,Composition Titemo,Mon 22:26,Finuhu Loboy,1-995
-1124,Spirit Vocucu,Fri 01:31,Qixux Gideb,5-396
-1125,Algebra Xifi,Mon 16:59,Naduvo Cenowa Riluk,8-886
-1126,Analysis Givi,Sun 09:32,Gebi Viquf Jaha,7-393
-1127,Algebra Woteri,Tue 23:21,Xolohi Vidut Nura,7-293
-1128,Composition Wusafu,Sat 02:28,Quzud Jazer Lirup,1-991
-1129,Drinking Geza,Sun 18:00,Zaret Cogo Locaj,2-919
-1130,English Cemu,Tue 03:23,Miri Noje Naniy,5-890
-1131,English Pizoyi,Wed 10:13,Haroxa Heda,9-551
-1132,Composition Qaloke,Sat 22:36,Sosiba Bivel Tide,2-426
-1133,Calculus Pewali,Wed 12:15,Kayeka Rumo,2-746
-1134,Python Gadohu,Tue 10:20,Narop Gotaqa Woxav,2-755
-1135,Python Mekac,Sat 20:16,Momamo Maye Pozi,6-383
-1136,Python Hajufe,Fri 08:11,Xufoxe Deju,6-121
-1137,Spirit Gove,Tue 04:43,Tohay Seqe,5-214
-1138,Python Zora,Tue 23:04,Nurami Kobabu,9-988
-1139,Calculus Luzosa,Fri 18:19,Tewabu Laleqi,8-183
-1140,Python Piyeb,Fri 18:35,Rupub Cosa Xibidu,4-874
-1141,Algebra Bene,Fri 16:59,Yoqa Pagoze,2-285
-1142,Spirit Reri,Fri 08:46,Juvere Nahoda,6-325
-1143,Drinking Fuyo,Tue 02:03,Jitan Vesiwi Muwore,3-816
-1144,English Vikimo,Sun 09:10,Wusag Curu Huwis,7-631
-1145,C++ Hibere,Tue 16:01,Nevi Bufi Sadu,2-635
-1146,Python Denewi,Sat 06:04,Hatag Libilo Jiju,1-835
-1147,Structure Zumeb,Sun 20:20,Jegiko Zimaj,8-157
-1148,Composition Pitaq,Fri 04:54,Zotabe Pewura Lofogu,9-415
-1149,Python Joru,Fri 10:13,Fopun Qigag,9-502
-1150,Analysis Kowo,Wed 16:13,Luheki Fopeju Laxa,6-774
-1151,English Bebemo,Fri 18:27,Josime Xiyo,8-457
-1152,Composition Susudu,Sat 05:46,Zagu Juqep,9-762
-1153,Algebra Zituw,Mon 07:24,Fisowi Jidu,8-746
-1154,C++ Yeyiso,Tue 03:47,Sacub Rayuc Luguco,4-139
-1155,C++ Fuyuk,Tue 07:02,Rokofe Cexa Kehero,5-121
-1156,Algebra Juxefe,Sat 03:31,Pexor Qayepu Bokepo,6-555
-1157,C++ Nexaqo,Mon 22:46,Nipiv Yoyis Vuzab,5-783
-1158,Analysis Saga,Sun 12:09,Hoye Pasal Widuse,9-828
-1159,Drinking Mano,Fri 08:11,Dave Zesayo,6-494
-1160,C++ Bapiz,Tue 06:00,Hicew Maqi,4-403
-1161,Structure Xoxomu,Sun 17:43,Wabope Ridoda,5-676
-1162,Analysis Dera,Tue 23:30,Jelixe Cota Sofuja,7-456
-1163,Algebra Ciseq,Wed 18:01,Fofiz Sepu Xunag,8-402
-1164,Calculus Pupod,Mon 08:22,Rufeqa Hoci Lejew,4-365
-1165,Python Juyoni,Wed 00:53,Juye Geruc,1-187
-1166,C++ Nujusu,Tue 23:28,Dese Zarig,5-503
-1167,Python Novu,Mon 21:06,Yeroq Ridupi Jipori,1-952
-1168,C++ Doho,Tue 16:56,Pixoh Naciw,1-173
-1169,Spirit Koka,Sun 15:27,Zuto Zuqeb Huga,4-249
-1170,Composition Kufaso,Fri 08:19,Zobar Poya Faroc,3-394
-1171,Python Wile,Fri 04:29,Mogelu Pudovi,7-218
-1172,Composition Nume,Mon 17:40,Lomet Gezic,7-736
-1173,English Sesuya,Thu 00:48,Sudege Nero Cijan,7-640
-1174,Python Nufu,Sun 02:44,Worif Zofu Nazey,3-505
-1175,Composition Fuver,Tue 08:50,Leso Pabara,6-212
-1176,English Wamopu,Fri 21:32,Vepunu Teqili,1-745
-1177,Drinking Viwes,Sat 04:01,Zideq Zipeb Kiyuy,4-275
-1178,Structure Mitaj,Tue 22:32,Gazec Colo,9-679
-1179,Analysis Qoqup,Tue 12:53,Vawe Jore Hibuxi,4-276
-1180,Spirit Govoso,Sun 16:39,Qecij Nehoqu,7-577
-1181,Python Moyis,Wed 14:28,Fuhus Laluz,3-695
-1182,Spirit Regezu,Sat 13:21,Ripas Cihale Qedos,8-743
-1183,Analysis Jota,Thu 20:39,Botuv Becu,8-888
-1184,Calculus Fomur,Fri 08:58,Jobob Sagu,6-653
-1185,C++ Fexofe,Thu 02:47,Wutoj Cisun,9-793
-1186,Algebra Lacuvi,Tue 04:32,Voyuyo Qika Husux,8-389
-1187,Composition Peva,Thu 01:16,Xeheh Wolafe Vola,8-210
-1188,English Toju,Sun 19:48,Vupe Kagu,5-137
-1189,C++ Lages,Sun 21:24,Cugu Sija,8-469
+1001,Calculus Copona,Tue 09:49,Lamog Hedes,7-407
+1002,Analysis Huho,Sun 12:44,Liteb Faso,2-339
+1003,Drinking Vevif,Sat 01:10,Kulij Qulube Digema,3-894
+1004,Composition Caqer,Mon 00:28,Zahan Zose Sama,4-182
+1005,Python Pihuwo,Sun 00:52,Qepih Zeqo Tina,7-255
+1006,Algebra Qocoj,Mon 13:09,Moqot Firana Qoxi,9-960
+1007,Python Teha,Mon 10:58,Xifi Bemaz Gubiri,3-839
+1008,Calculus Misuw,Tue 13:46,Foju Jige,7-165
+1009,English Tiqer,Thu 11:48,Jijaba Lopis,1-984
+1010,C++ Qenuqa,Tue 07:14,Zeti Xiza,1-873
+1011,Structure Tetogo,Tue 21:29,Zejawi Nebamo,2-813
+1012,Composition Yuxo,Wed 03:56,Hezise Fata,1-617
+1013,English Pakuj,Thu 13:30,Xugezi Belina Foja,2-467
+1014,Analysis Jicivu,Thu 21:48,Wiqut Lonaw Nelara,5-979
+1015,English Haxexo,Sat 19:14,Coda Tikic Cinum,9-387
+1016,Spirit Savil,Wed 18:56,Foqapu Xudeqi Jiwuse,5-285
+1017,C++ Lujica,Tue 01:48,Dimut Vazuv Hipoba,2-305
+1018,Analysis Kozu,Thu 03:29,Humi Teqi Zucul,2-842
+1019,Composition Biqoq,Tue 11:57,Fico Licib,5-789
+1020,English Tihoj,Sat 01:50,Micava Qeqani,9-152
+1021,Spirit Semew,Sat 18:30,Sude Racova,5-594
+1022,Composition Fisite,Fri 21:03,Zixene Denus Puwo,1-775
+1023,C++ Fugij,Tue 10:11,Feyu Kituf Wuyi,1-624
+1024,Algebra Piyit,Mon 22:41,Pakab Quviq,4-150
+1025,Structure Zabe,Sun 12:36,Cebot Xovu Remay,1-202
+1026,Calculus Civay,Sat 17:34,Saror Bome Fefi,2-384
+1027,Composition Pavaxe,Wed 21:25,Jozax Wequwu,4-825
+1028,Python Nazage,Wed 12:01,Juhul Cebaxu,3-799
+1029,Spirit Naxe,Sun 04:34,Piwe Pates,2-743
+1030,Spirit Petu,Tue 04:06,Veye Yikor,7-183
+1031,Analysis Sobe,Wed 03:59,Kopiv Vusez Seji,1-803
+1032,English Vudiy,Sun 00:10,Muvip Menu Xatusi,6-937
+1033,Composition Lodag,Mon 16:39,Sivo Fose Naxa,1-368
+1034,Drinking Hehequ,Tue 00:31,Tiveb Zevoz,8-697
+1035,C++ Ziqaj,Mon 12:51,Sadu Yuxi,1-223
+1036,Algebra Wugoya,Tue 19:50,Gixot Yozes,8-303
+1037,Drinking Tula,Fri 02:53,Vedi Winece Woguv,7-881
+1038,C++ Mecaya,Fri 12:37,Duba Weqal,1-221
+1039,C++ Kexo,Sat 01:11,Yuwel Liqe,4-492
+1040,Python Xawi,Tue 06:11,Yifap Zoje Towo,7-287
+1041,Algebra Wote,Wed 11:48,Xeseh Saboh Napeb,3-423
+1042,Calculus Semej,Sun 09:34,Docowe Gihi,7-762
+1043,English Duto,Sat 13:18,Jivar Guwoz Teqe,7-704
+1044,Algebra Zisud,Thu 21:57,Wumife Xuwey Gafudu,6-207
+1045,English Raru,Sun 20:38,Duci Gewaqa,7-860
+1046,Drinking Goyeq,Tue 06:12,Goketi Naga Muqi,3-838
+1047,Spirit Bupa,Tue 08:59,Nabi Henah,8-176
+1048,Structure Wemaqo,Sun 07:42,Fori Woxi Nahe,4-843
+1049,Drinking Yosuq,Sun 00:07,Puruvi Yutuvo,9-575
+1050,Structure Jomuwa,Tue 18:38,Tegari Lirezo,2-881
+1051,C++ Hepa,Mon 05:11,Qote Joti Zabet,2-321
+1052,English Zadaro,Wed 06:15,Hesud Pavaq Kovar,2-536
+1053,Drinking Mupure,Wed 11:43,Casi Lapatu Tuqov,2-450
+1054,English Tude,Wed 15:15,Yoco Puyu,2-889
+1055,C++ Xeve,Thu 21:46,Toqok Homup Qufeb,5-911
+1056,Spirit Nepek,Sun 01:58,Relul Gujar Doboje,2-908
+1057,Spirit Komut,Fri 13:20,Yidu Dobu,2-804
+1058,Drinking Xipej,Fri 11:15,Tedaqi Cetap Lipek,9-437
+1059,English Dazen,Sat 22:49,Wegafo Peyudo,9-728
+1060,Calculus Mubena,Sun 23:55,Vanama Vicami,6-423
+1061,Algebra Yubo,Tue 16:00,Bipu Goba,3-117
+1062,Drinking Pemuni,Sat 02:55,Goder Nabasi Xival,2-952
+1063,Drinking Worife,Mon 14:16,Fodi Ficul,1-478
+1064,Structure Levowa,Tue 05:09,Gefu Naki Lojeqi,2-909
+1065,Algebra Bepu,Tue 18:29,Fabu Vopeci,9-659
+1066,Drinking Jomih,Tue 14:43,Mixa Lupa Soluc,7-356
+1067,English Bivim,Thu 19:31,Kovusi Gociw,2-920
+1068,Drinking Jakoci,Sun 06:48,Bafaho Kepuve Wikim,5-632
+1069,C++ Laxi,Sun 09:29,Ronuti Dice Wulez,5-545
+1070,Calculus Pabuwo,Tue 12:42,Bimoya Nejire Zemu,8-960
+1071,C++ Zeti,Tue 06:37,Duxuvi Qicada,6-186
+1072,C++ Vidosa,Wed 15:48,Tadaq Zepad,2-284
+1073,Spirit Duco,Thu 12:54,Citux Rudan Vawigo,7-523
+1074,Calculus Ciwe,Thu 07:45,Wanat Josu,1-919
+1075,Structure Buviq,Thu 18:14,Ceko Fekeri Yufe,6-395
+1076,Drinking Jese,Tue 21:24,Xidere Hopogu Vevur,4-675
+1077,Spirit Japem,Sun 04:53,Fapaj Jaju Yibo,9-939
+1078,Spirit Horijo,Tue 06:49,Casara Decapi Seki,5-699
+1079,Composition Vesu,Sun 23:08,Penu Sine Vobewo,4-404
+1080,Structure Mubu,Wed 14:26,Yodesi Seloyo Ruge,8-934
+1081,Calculus Jujay,Thu 10:05,Fuxa Koxad,6-211
+1082,Analysis Fuxeva,Wed 08:08,Pobu Qudir Lizu,5-384
+1083,Analysis Qewoj,Thu 09:59,Pajos Libez Qexog,9-782
+1084,Spirit Liba,Wed 16:18,Mikob Rinigo,5-148
+1085,Python Pozic,Thu 21:11,Xabaye Deyif,9-480
+1086,Calculus Begetu,Tue 23:05,Mane Yuweyo Lodas,8-991
+1087,Analysis Cadi,Sun 05:30,Dohe Qipo Noja,7-367
+1088,Analysis Yaxe,Thu 08:55,Huyut Sasod Qayuwu,6-712
+1089,Structure Tevuci,Fri 08:28,Tude Hopoq,8-152
+1090,C++ Gesujo,Thu 05:13,Pezeju Guva,9-222
+1091,Python Zekaba,Thu 20:10,Caviwa Moqac Bafev,9-677
+1092,Drinking Xela,Fri 02:45,Nupoye Nepo,5-569
+1093,Python Dapur,Fri 21:11,Pucasa Yoru,9-962
+1094,Composition Wopib,Sat 17:12,Zonez Juxev Nivo,8-144
+1095,Spirit Qusera,Fri 09:59,Leked Recuwo Suna,4-377
+1096,Python Novu,Mon 20:50,Bijejo Vuqik Gemo,9-950
+1097,Structure Buqo,Thu 12:15,Pavowu Foxos Wagul,1-197
+1098,Algebra Nirufe,Thu 14:10,Puni Hujifa Hufobo,4-185
+1099,Algebra Zusaha,Sat 18:10,Xuko Xixi,6-895
+1100,Structure Zevebu,Mon 03:31,Kexede Zefano Zofuha,6-903
+1101,Structure Zinuku,Fri 14:48,Zequ Yuta,9-272
+1102,Analysis Pone,Mon 12:04,Mawu Neyec,2-268
+1103,Composition Quzam,Sat 21:30,Gocuy Vefu,8-612
+1104,Structure Cunexo,Fri 01:47,Ligu Leno,2-536
+1105,Calculus Quqaji,Sat 22:39,Pilaz Zalo,6-565
+1106,Calculus Kudo,Tue 21:35,Kecicu Cehozi,9-811
+1107,Spirit Meqowo,Fri 06:11,Kelij Yupuri,2-146
+1108,Drinking Sejoh,Wed 22:01,Qimoj Seze Qacavu,5-224
+1109,Analysis Suva,Wed 09:21,Tonuru Kefiz,7-893
+1110,Drinking Lovo,Mon 17:10,Naweb Wedum,4-659
+1111,Analysis Koyu,Thu 08:09,Bosore Lefiv,7-869
+1112,Structure Wunive,Wed 04:43,Nayeco Zofusa Dotapo,7-722
+1113,English Tixeq,Wed 19:52,Naxowi Nalaxe,1-118
+1114,Composition Lupej,Sat 17:27,Voqunu Gujo,6-643
+1115,Composition Sicuz,Sat 18:19,Watu Kure Yacu,6-311
+1116,Algebra Kuyid,Thu 05:55,Linoy Dures Gonib,7-468
+1117,C++ Vayazo,Tue 12:28,Nemig Tala,8-431
+1118,C++ Qola,Thu 15:08,Jemef Safo Nipofa,8-564
+1119,Spirit Funos,Tue 08:46,Lotuke Cutaz Zewipo,4-141
+1120,Structure Foqaz,Tue 02:37,Daye Feyebe,5-514
+1121,Drinking Dowoqa,Thu 08:31,Negipo Yarida Danuqi,7-533
+1122,English Xefu,Tue 02:26,Tohi Qiqe Kenoli,4-962
+1123,Drinking Fabi,Fri 15:45,Tovevo Fapiva,4-773

@@ -8,14 +8,13 @@ const string templatePath = "view/courses.html";  // For Cmake
 tuple<string, string, string> CoursesController::getResponse()
 {
     nlohmann::json jsonData = service.getCoursesJson();
-    // cout << jsonData.dump() << endl;
-    //    cout << data << endl;
-    //    return make_tuple("200 OK", data, "application/json");
     map<string, string> placeholders = {{"{{COURSES}}", jsonData.dump()}};
-    // map<string, string> placeholders = {{"{{COURSES}}", getHtmlRows(jsonData)}};
     return make_tuple("200 OK", renderHTML(templatePath, placeholders), "text/html");
 }
 
+/*
+
+// 弃用
 string CoursesController::getHtmlRows(const nlohmann::json &jsonData)
 {
     string rows = "";
@@ -28,3 +27,5 @@ string CoursesController::getHtmlRows(const nlohmann::json &jsonData)
     }
     return rows;
 }
+
+*/

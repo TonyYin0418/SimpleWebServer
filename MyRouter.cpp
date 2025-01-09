@@ -5,16 +5,6 @@
 #include "controller/ScoresController.h"
 #include "controller/StudentsController.h"
 
-// MyRouter::MyRouter() :
-// courses_dao(),
-// scores_dao(),
-// courses_service(courses_dao),
-// scores_service(scores_dao),
-// courses_controller(courses_service),
-// scores_controller(scores_service),
-// mainpage_controller()
-// {}
-
 void MyRouter::setupRouting()
 {
     static CoursesDao courses_dao;
