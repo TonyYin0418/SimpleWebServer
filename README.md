@@ -2,75 +2,88 @@
 
 This is a simple web server built using C++.
 
-大作业
+## Getting Started
 
-# Getting Started
-
-## Prerequisites
+### Prerequisites
 
 Before running the server, ensure you have the following installed:
-	•	C++ Compiler: A C++ compiler like g++ or clang++.
-	•	CMake: For building the project.
 
-## Installation
+- **C++ Compiler**: A C++ compiler like g++ or clang++.
+- **CMake**: For building the project.
+
+Development Environment:
+- **Operating System**: Mac OS 15.1.1 (You can also build the project on Linux)
+- **Compiler**: clang++
+
+### Installation
 
 1.	Clone the repository:
-```
-git clone https://github.com/your-username/SimpleWebServer.git
+```sh
+git clone https://github.com/TonyYin0418/SimpleWebServer.git
 cd SimpleWebServer
 ```
 2.	Build the project:
-```
+```sh
 mkdir build
 cd build
 cmake ..
 make
 ```
-3.	After building, you can run the server:
+3. Move the executable to the root directory:
+```sh
+mv webServer ..
 ```
+
+4. Run the server from the root directory:
+```sh
+cd ..
 ./webServer
 ```
-4.	Access the server in your browser by visiting:
-```
+
+5. Access the server in your browser by visiting:
+```sh
 http://localhost:7890/
 ```
+
 
 # Project Structure
 
 ```
 .
+├── README.md
 ├── MyRouter.cpp
 ├── MyRouter.h
 ├── http_server.cpp
 ├── http_server.h
-├── framework
+├── framework/
+│   ├── main.cpp
 │   ├── controller.cpp
 │   ├── controller.h
-│   ├── framework.h
-│   ├── http.cpp
-│   ├── http.h
-│   ├── main.cpp
 │   ├── router.cpp
 │   └── router.h
-├── Controller
+├── controller/
 │   ├── CoursesController.cpp
 │   ├── CoursesController.h
 │   ├── MainPageController.cpp
 │   ├── MainPageController.h
 │   ├── ScoresController.cpp
-│   └── ScoresController.h
-├── service
+│   ├── ScoresController.h
+│   ├── StudentsController.cpp
+│   └── StudentsController.h
+├── service/
 │   ├── CoursesService.cpp
-│   └── CoursesService.h
-├── dao
+│   ├── CoursesService.h
+│   ├── ScoresService.cpp
+│   ├── ScoresService.h
+│   ├── StudentsService.cpp
+│   └── StudentsService.h
+├── dao/
 │   ├── CoursesDao.cpp
-│   └── CoursesDao.h
-└── view
-|   └── courses.html
-├── public
-│   ├── courses.csv
-│   └── sytles.css
+│   ├── CoursesDao.h
+│   ├── ScoresDao.cpp
+│   └── ScoresDao.h
+├── view/
+├── public/
 └── nlohmann
     └── json.hpp
 ```
-你可以根据具体的功能和结构进一步调整和补充文档内容。如果你有其他模块或功能，记得在 Features 和 Project Structure 部分进行描述。
