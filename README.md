@@ -44,9 +44,25 @@ cd ..
 ```sh
 http://localhost:7890/
 ```
+## Frontend
+
+The frontend of this project is powered by Element Plus, a Vue 3.0 based component library. The HTML templates are located in the `view` directory and are rendered by the server.
+
+## Backend
+
+The backend of this project is built using C++ and includes the following components:
+
+- **HTTP Server**: Handles incoming HTTP requests and sends responses.
+- **Router**: Routes requests to the appropriate controller based on the URL and HTTP method.
+- **Controller**: Contains the business logic for handling requests and generating responses.
+- **Service**: Encapsulates business logic and interacts with the DAO to retrieve and process data.
+- **DAO (Data Access Object)**: Handles data access and manipulation, such as reading from CSV files.
+- **JSON Processing**: Uses the nlohmann JSON library to handle JSON data.
+
+The backend processes requests, interacts with the data layer, and returns the appropriate HTML or JSON responses to the client.
 
 
-# Project Structure
+## Project Structure
 
 ```
 .
